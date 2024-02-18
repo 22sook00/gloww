@@ -1,16 +1,18 @@
 "use client";
 import { templateState, weddingDataState } from "@/utils/atom";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useMemo } from "react";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import Iphone from "../assets/Iphone";
+import Greeting from "../greeting/Greeting";
+import Map from "../map/Map";
 import Template1 from "../template/Template1";
 import Template2 from "../template/Template2";
 import Template3 from "../template/Template3";
 
 const MobilePreview = () => {
   const selectTemplateId = useRecoilValue(templateState);
-  const setWedding = useSetRecoilState(weddingDataState);
+  const [wedding, setWedding] = useRecoilState(weddingDataState);
 
   const templateSwitch = useMemo(() => {
     switch (selectTemplateId) {
@@ -32,7 +34,6 @@ const MobilePreview = () => {
         return res.json();
       })
       .then((data) => {
-        console.log("da", data);
         setWedding(data);
       })
       .catch((err) => {
@@ -43,7 +44,11 @@ const MobilePreview = () => {
   return (
     <aside className="h-[844px] relative ">
       <Iphone />
-      {templateSwitch}
+      <div className="flex flex-col w-[389px] h-[720px] absolute top-24 left-10 overflow-scroll  gap-[30px]">
+        {templateSwitch}
+        <Greeting />
+        <section>{wedding && <Map location={wedding?.location} />}</section>
+      </div>
     </aside>
   );
 };
