@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .default-layout {
+    @apply m-auto px-5 lg:px-8 lg:max-w-[1240px];
+  }
+  .flex-center {
+    @apply flex justify-center items-center gap-4;
+  }
+  .flex-row {
+    @apply flex justify-start items-center gap-4;
+  }
+  .flex-between {
+    @apply flex justify-between items-center w-full h-full;
+  }
+  .flex-col-default {
+    @apply flex justify-center items-start gap-4;
+  }
+  .default-btn {
+    @apply primary text-white px-2 py-1 rounded-md;
+  }
+  .outline-btn {
+    @apply bg-white text-default-black border border-outline px-2 py-1 rounded-md;
+  }
+
+  .dashed-horizon-line {
+    @apply my-10 border-dashed border-b-4;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+body {
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
