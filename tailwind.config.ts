@@ -3,6 +3,7 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   important: true,
   darkMode: "class",
+  mode: "jit",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -22,7 +23,11 @@ const config: Config = {
         "primary-through": "rgba(255, 217, 81, 0.3)",
         primary: "#2586F9",
         outline: "#dddddd",
-        "default-black": "#334155",
+        "light-outline": "#BDBAB7",
+        "dark-outline": "#221B19",
+        "default-black": "#323130",
+        "light-black": "#494949",
+
         "text-dark": "#333333",
         "text-light": "#9ca3af",
         "text-tint": "#d1d1d1",

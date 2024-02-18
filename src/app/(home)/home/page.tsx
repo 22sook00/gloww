@@ -1,9 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-
 export default function Home() {
   return (
-    <main className="default-layout min-h-screen mt-32">
+    <main className="default-layout min-h-screen mt-24">
       <p>HOME</p>
     </main>
   );

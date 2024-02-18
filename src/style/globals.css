@@ -19,10 +19,10 @@
     @apply flex justify-center items-start gap-4;
   }
   .default-btn {
-    @apply primary text-white px-2 py-1 rounded-md;
+    @apply bg-primary text-white px-3 py-1 rounded-md;
   }
   .outline-btn {
-    @apply bg-white text-default-black border border-outline px-2 py-1 rounded-md;
+    @apply bg-white text-default-black border border-outline px-3 py-1 rounded-md;
   }
 
   .dashed-horizon-line {
@@ -34,6 +34,9 @@
 }
 
 body {
+  p {
+    letter-spacing: 2%;
+  }
 }
 
 @layer utilities {

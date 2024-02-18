@@ -3,8 +3,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="default-layout w-full h-20 bg-slate-200 fixed top-0">
-      <nav className="flex-between">
+    <header className="w-full h-20 bg-slate-200 fixed top-0 z-10">
+      <nav className="default-layout  flex-between">
         <h3>Header logo</h3>
         <ul className="flex-row">
           <li className="outline-btn">
