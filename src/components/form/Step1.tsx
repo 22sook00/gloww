@@ -15,13 +15,14 @@ const Step1 = () => {
     setSelectId(templateId);
   };
   return (
-    <section>
+    <form>
       <ul className="flex-row">
         {templateArr.map((btn) => {
           return (
             <li key={btn.templateId}>
               <button
                 className="default-btn"
+                type="button"
                 onClick={() => handleClickTemplate(btn.templateId)}
               >
                 {btn.name}
@@ -30,7 +31,7 @@ const Step1 = () => {
           );
         })}
       </ul>
-    </section>
+    </form>
   );
 };
 
