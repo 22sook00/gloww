@@ -1,18 +1,22 @@
 import React from "react";
 import RecoilProvider from "@/components/provider/RecoilProvider";
-import MobilePreview from "@/components/form/MobilePreview";
-import Step1 from "@/components/form/Step1";
+import MobilePreview from "@/components/preview/MobilePreview";
+import Form from "@/components/form/Form";
+import FormWrapper from "@/components/form/FormWrapper";
 
 const FormPage = () => {
   return (
     <RecoilProvider>
-      <main className="default-layout min-h-screen mt-24">
-        <h1>step 1 </h1>
-        <div className="grid  grid-cols-[1fr,_467px] mb-36">
-          <Step1 />
-          <MobilePreview />
-        </div>
-      </main>
+      <div className="bg-tint-gray">
+        <main className="default-layout min-h-screen mt-[72px] ">
+          <div className="grid grid-cols-[406px,500px] justify-center py-[46px] gap-[18px]">
+            <FormWrapper>
+              <MobilePreview />
+              <Form />
+            </FormWrapper>
+          </div>
+        </main>
+      </div>
     </RecoilProvider>
   );
 };

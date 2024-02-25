@@ -16,7 +16,7 @@
     @apply flex justify-between items-center w-full h-full;
   }
   .flex-col-default {
-    @apply flex justify-center items-start gap-4;
+    @apply flex flex-col justify-center items-start gap-4;
   }
   .default-btn {
     @apply bg-primary text-white px-3 py-1 rounded-md;

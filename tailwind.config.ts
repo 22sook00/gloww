@@ -11,6 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        "preview-height": "calc(100vh - 160px)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -25,7 +28,7 @@ const config: Config = {
         outline: "#dddddd",
         "light-outline": "#DBD9D8",
         "default-outline": "#D5D6D8",
-        "dark-outline": "#221B19",
+        "dark-outline": "#B9B6B3",
         "light-black": "#494949",
         "default-black": "#323130",
         "dark-black": "#2C2E30",

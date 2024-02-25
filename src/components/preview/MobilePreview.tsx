@@ -43,11 +43,10 @@ const MobilePreview = () => {
 
   return (
     <aside className="h-[844px] relative ">
-      <Iphone />
-      <div className="flex flex-col w-[389px] h-[720px] absolute top-24 left-10 overflow-scroll  gap-[30px]">
+      <div className="flex flex-col h-preview-height fixed top-[124px] overflow-scroll gap-[30px] border-dark-outline border-[8px] rounded-[24px] bg-white">
         {templateSwitch}
         <Greeting />
-        <section>{wedding && <Map location={wedding?.location} />}</section>
+        {/*<section>{wedding && <Map location={wedding?.location} />}</section>*/}
       </div>
     </aside>
   );

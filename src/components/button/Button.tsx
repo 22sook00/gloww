@@ -25,7 +25,7 @@ const Button = ({
       : size === "md"
       ? "min-w-[100px] h-[43px] p-3"
       : size === "lg"
-      ? "min-w-[130px] h-[52px] p-4 text-lg"
+      ? "min-w-[130px] w-full h-[52px] p-4 text-lg rounded-[8px]"
       : size === "full"
       ? "w-full h-[43px] p-3"
       : undefined;

@@ -19,7 +19,7 @@ const Template2 = () => {
       <Image
         src="/imgs/mainSample.png"
         alt="sample1"
-        width={390}
+        width={330}
         height={100}
         placeholder="blur"
         blurDataURL="/imgs/mainSample.png"
