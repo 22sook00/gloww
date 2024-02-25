@@ -6,6 +6,9 @@
   .default-layout {
     @apply m-auto px-5 lg:px-8 lg:max-w-[1240px];
   }
+  .form-section-layout {
+    @apply flex flex-col justify-start items-start gap-4;
+  }
   .flex-center {
     @apply flex justify-center items-center gap-4;
   }
@@ -32,7 +35,7 @@
 
 body {
   p {
-    letter-spacing: 2%;
+    line-height: normal;
   }
 }
 

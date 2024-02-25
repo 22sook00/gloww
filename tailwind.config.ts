@@ -33,8 +33,9 @@ const config: Config = {
         "default-black": "#323130",
         "dark-black": "#2C2E30",
         "tint-gray": "#EDEFF1",
-        "light-gray": "#615D5C",
-        "default-gray": "#E9E9E9",
+        "light-gray": "#E9E9E9",
+        "default-gray": "#868A8D",
+        "dark-gray": "#615D5C",
 
         "text-dark": "#333333",
         "text-tint": "#d1d1d1",
