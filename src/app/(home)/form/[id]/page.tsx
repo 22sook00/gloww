@@ -9,7 +9,7 @@ const FormPage = () => {
     <RecoilProvider>
       <div className="bg-tint-gray">
         <main className="default-layout min-h-screen mt-[72px] ">
-          <div className="grid grid-cols-[406px,500px] justify-center py-[46px] gap-[18px]">
+          <div className="grid lg:grid-cols-[406px,500px] justify-center py-[46px] gap-[18px]">
             <FormWrapper>
               <MobilePreview />
               <Form />

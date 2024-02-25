@@ -72,6 +72,8 @@ const config: Config = {
       },
       screens: {
         desktop: "1120px",
+        tablet: "992px",
+        mobile: "430px",
       },
       gridTemplateColumns: {
         "listpage-desktop": "269px minmax(1fr, 835px)",

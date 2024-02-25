@@ -6,10 +6,10 @@ import { weddingDataState } from "@/utils/atom";
 const Greeting = () => {
   const { groom, bride } = useRecoilValue(weddingDataState);
   return (
-    <section className="bg-default-gray p-[30px]">
+    <section className="bg-light-gray p-[30px]">
       <article className="bg-white py-10 px-6">
         <h3 className="text-lg mb-8">결혼합니다</h3>
-        <p className="text-sm leading-[32px] text-light-gray">
+        <p className="text-sm leading-[32px] text-default-gray">
           서로가 마주보며 다져온 사랑을 <br />
           이제 함께 한 곳을 바라보며 <br />
           걸어갈 수 있는 큰 사랑으로 <br />
