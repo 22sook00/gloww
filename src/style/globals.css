@@ -21,9 +21,6 @@
   .default-btn {
     @apply bg-primary text-white px-3 py-1 rounded-md;
   }
-  .outline-btn {
-    @apply bg-white text-default-black border border-outline px-3 py-1 rounded-md;
-  }
 
   .dashed-horizon-line {
     @apply my-10 border-dashed border-b-4;

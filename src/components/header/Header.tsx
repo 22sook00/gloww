@@ -1,22 +1,20 @@
 import Link from "next/link";
 import React from "react";
+import Button from "../button/Button";
 
 const Header = () => {
   return (
-    <header className="w-full h-20 bg-slate-200 fixed top-0 z-10">
+    <header className="w-full h-[72px] fixed top-0 z-10 backdrop-blur">
       <nav className="default-layout  flex-between">
         <h3>Header logo</h3>
-        <ul className="flex-row">
-          <li className="outline-btn">
-            <Link href={"/form/1"}>자주 묻는 질문</Link>
-          </li>
-          <li className="outline-btn">
-            <Link href={"/form/1"}>청첩장 보러가기</Link>
-          </li>
-          <li className="outline-btn">
-            <Link href={"/form/1"}>청첩장 제작하기</Link>
-          </li>
-        </ul>
+        <div className="flex-row gap-4">
+          <Button theme="secondary">
+            <Link href={"/form/1"}>새로 제작하기</Link>
+          </Button>
+          <Button>
+            <Link href={"/form/1"}>중간 저장하기</Link>
+          </Button>
+        </div>
       </nav>
     </header>
   );
