@@ -36,6 +36,8 @@ const config: Config = {
         "light-gray": "#E9E9E9",
         "default-gray": "#868A8D",
         "dark-gray": "#615D5C",
+        "check-gray": "#D0D5DD",
+        "input-gray": "#f9f9f9",
 
         "text-dark": "#333333",
         "text-tint": "#d1d1d1",

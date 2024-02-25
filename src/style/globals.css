@@ -7,7 +7,7 @@
     @apply m-auto px-5 lg:px-8 lg:max-w-[1240px];
   }
   .form-section-layout {
-    @apply flex flex-col justify-start items-start gap-4;
+    @apply w-full flex flex-col justify-start items-start gap-4;
   }
   .flex-center {
     @apply flex justify-center items-center gap-4;
@@ -36,6 +36,10 @@
 body {
   p {
     line-height: normal;
+  }
+  input:active,
+  input:focus {
+    outline: none;
   }
 }
 
