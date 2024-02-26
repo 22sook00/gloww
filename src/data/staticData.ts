@@ -15,11 +15,20 @@ export const EFFECT_ARR = [
 ];
 
 export const COLOR_ARR = [
-  { colocId: 0, name: "#ffdfec" },
-  { colocId: 1, name: "#e5f8ff" },
-  { colocId: 2, name: "#fffae5" },
-  { colocId: 3, name: "#eeefff" },
-  { colocId: 4, name: "#ffebdb" },
+  { colocId: 0, name: "#FFE4E0" },
+  { colocId: 1, name: "#FFF4B8" },
+  { colocId: 2, name: "#F2F8E4" },
+  { colocId: 3, name: "#E4F1F8" },
+  { colocId: 4, name: "#E4E9F8" },
+  { colocId: 5, name: "#616367" },
+];
+
+export const GREETING_ARR = [
+  { greetingId: 0, name: "사랑" },
+  { greetingId: 1, name: "가정" },
+  { greetingId: 2, name: "시국" },
+  { greetingId: 3, name: "존중" },
+  { greetingId: 4, name: "한걸음" },
 ];
 
 /**
@@ -50,3 +59,22 @@ export const FORM_ERROR = {
     duplicate: "이미 사용중인 아이디입니다.",
   },
 };
+
+/**
+ * 인삿말
+ */
+
+export const INIT_GREETING_DATA = `
+ <p>서로에게 행복을 주는 사람을 만났습니다.</p>
+ <p>웃는 모습이 너무나 예쁜 그 사람을 만났습니다.</p>
+ <p>배려하는 마음이 따뜻한 그 사람을 만났습니다.</p>
+ 
+ <p>운명처럼 만나게 된 우리의 인연</p>
+ <p>그 인연에 이끌려 이제 영원을</p>
+ <p>함께 약속하려 합니다.</p>
+ 
+ <p>저희의 하나 됨을 지켜보아 주시고</p>
+ <p>격려해 주시면 더없는 기쁨으로</p>
+ <p>간직하겠습니다.</p>
+
+`;

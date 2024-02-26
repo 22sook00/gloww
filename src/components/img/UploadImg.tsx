@@ -58,7 +58,7 @@ const UploadImg = ({ type = "edit" }) => {
           </div>
         )}
         {!isMainImageLoading && imageSrc && (
-          <div className="relative group/item flex-row w-[150px] h-[150px] overflow-hidden cursor-pointer  bg-light-gray rounded border border-dashed">
+          <div className="relative group/item flex-row w-[150px] h-[150px] overflow-hidden cursor-pointer  bg-light-gray rounded">
             {/*타입이 x 면*/}
             {type === "x" && (
               <div
@@ -93,14 +93,14 @@ const UploadImg = ({ type = "edit" }) => {
             )}
           </div>
         )}
-        <div className="relative">
+        <div className="relative ">
           {!isMainImageLoading && !imageSrc && (
             <label
               onClick={() =>
                 mainImageRef.current && mainImageRef.current.click()
               }
             >
-              <div className="relative flex-center gap-[10px] flex-col h-full cursor-pointer">
+              <div className="relative w-[150px] h-[150px]  border border-dashed rounded-md flex-center gap-[10px] flex-col cursor-pointer">
                 <UploadIcon />
                 <p className=" text-default-gray text-sm">사진 업로드</p>
               </div>
