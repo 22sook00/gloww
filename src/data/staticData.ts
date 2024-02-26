@@ -31,6 +31,29 @@ export const GREETING_ARR = [
   { greetingId: 4, name: "한걸음" },
 ];
 
+export const TRANSPORTATION_ARR = [
+  { transportationId: 0, name: "자가용" },
+  { transportationId: 1, name: "버스" },
+  { transportationId: 2, name: "지하철" },
+  { transportationId: 3, name: "도보" },
+  { transportationId: 4, name: "직접 입력" },
+];
+
+export const GALLARY_ARR = [
+  { gallaryId: 0, name: "슬라이드 형" },
+  { gallaryId: 1, name: "갤러리 형" },
+  { gallaryId: 2, name: "앨범 형" },
+  { gallaryId: 3, name: "그리드 형" },
+];
+export const OUTRO_ARR = [
+  { outroId: 0, name: "감사1" },
+  { outroId: 1, name: "감사2" },
+  { outroId: 2, name: "연인 시1" },
+  { outroId: 3, name: "연인 시2" },
+  { outroId: 4, name: "영화 구절1" },
+  { outroId: 5, name: "영화 구절2" },
+];
+
 /**
  * 인풋 폼
  */
