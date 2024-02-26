@@ -15,10 +15,11 @@ export const EFFECT_ARR = [
 ];
 
 export const COLOR_ARR = [
-  { colocId: 0, name: "bg-slate-300" },
-  { colocId: 1, name: "bg-slate-400" },
-  { colocId: 2, name: "bg-slate-500" },
-  { colocId: 3, name: "bg-slate-600" },
+  { colocId: 0, name: "#ffdfec" },
+  { colocId: 1, name: "#e5f8ff" },
+  { colocId: 2, name: "#fffae5" },
+  { colocId: 3, name: "#eeefff" },
+  { colocId: 4, name: "#ffebdb" },
 ];
 
 /**

@@ -7,6 +7,7 @@ import Tab from "../tab/Tab";
 import FormSectionLayout from "../layout/FormSectionLayout";
 import { COLOR_ARR, EFFECT_ARR, TEMPLATE_ARR } from "@/data/staticData";
 import { useFormContext } from "react-hook-form";
+import UploadImg from "../img/UploadImg";
 
 const DesignForm = () => {
   const setSelectId = useSetRecoilState(templateState);
@@ -33,7 +34,7 @@ const DesignForm = () => {
     <Dropdown title={"디자인"}>
       <div className="form-section-layout gap-6">
         <FormSectionLayout subTitle="메인 사진">
-          <div className="w-[150px] h-[150px] bg-gray-300"></div>
+          <UploadImg />
         </FormSectionLayout>
         <FormSectionLayout subTitle="템플릿 디자인">
           <ul className="flex-row">
@@ -61,12 +62,13 @@ const DesignForm = () => {
                   key={color.colocId}
                   className={`
                   cursor-pointer
-                  w-[52px] h-[52px] rounded-xl ${color.name}
+                  w-[52px] h-[52px] rounded-xl focus:ring-2 ring-offset-2
                   ${
                     watch("templateColor") === color.name &&
-                    "border border-default-black"
+                    "border border-light-gray ring-2"
                   }
                   `}
+                  style={{ background: color.name }}
                 />
               );
             })}

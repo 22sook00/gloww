@@ -23,6 +23,7 @@ const config: Config = {
         "spin-slow": "spin 5s ease infinite",
       },
       colors: {
+        "opacity-gray": "rgba(40, 40, 40, 0.6)",
         "primary-through": "rgba(255, 217, 81, 0.3)",
         primary: "#2586F9",
         outline: "#dddddd",
