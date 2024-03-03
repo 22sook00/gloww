@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Wave from "../effect/Wave";
 
 const Template2 = () => {
   return (
-    <section className=" p-[30px] pb-0">
+    <section className="p-[30px] pb-0">
       <div className="flex flex-col items-start mb-10">
         <div className="flex flex-col  gap-3 text-[22px] mb-6 text-default-black">
           <p>이숙영</p>
@@ -16,14 +17,17 @@ const Template2 = () => {
           <p>더 청담 3F 노블레스홀</p>
         </div>
       </div>
-      <Image
-        src="/imgs/mainSample.png"
-        alt="sample1"
-        width={330}
-        height={100}
-        placeholder="blur"
-        blurDataURL="/imgs/mainSample.png"
-      />
+      <div className="relative">
+        <Image
+          src="/imgs/mainSample.png"
+          alt="sample1"
+          width={330}
+          height={100}
+          placeholder="blur"
+          blurDataURL="/imgs/mainSample.png"
+        />
+        <Wave />
+      </div>
     </section>
   );
 };

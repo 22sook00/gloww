@@ -5,6 +5,8 @@ import { useMemo } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 import { useRecoilState, useRecoilValue } from "recoil";
 import Iphone from "../assets/Iphone";
+import Snow from "../effect/Snow";
+import Wave from "../effect/Wave";
 import Greeting from "../greeting/Greeting";
 import Map from "../map/Map";
 import Template1 from "../template/Template1";
@@ -71,11 +73,12 @@ const MobilePreview = () => {
       <div
         style={{ background: useSelectStyle?.color }}
         className={`
+        w-[406px]
       flex flex-col h-preview-height lg:fixed top-[124px] 
-      overflow-scroll gap-[30px] 
+      overflow-scroll gap-[30px]
       border-dark-outline border-[8px] rounded-[24px] `}
       >
-        {templateSwitch}
+        <div className="relative">{templateSwitch}</div>
         <Greeting />
         {/*<section>{wedding && <Map location={wedding?.location} />}</section>*/}
       </div>
