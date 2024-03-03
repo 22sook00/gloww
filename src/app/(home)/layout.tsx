@@ -1,17 +1,31 @@
 import Header from "@/components/header/Header";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Gowun_Batang } from "next/font/google";
 import localFont from "next/font/local";
 
 import { siteMetadata } from "@/utils/siteMetaData";
 import "@style/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
-// Font files can be colocated inside of `app`
-const pretendard = localFont({
-  src: "../fonts/Pretendard-Light.woff",
+const bookk = localFont({
+  src: "../fonts/bookk_regular.ttf",
+  variable: "--font-bookk",
   display: "swap",
+});
+const nanum_square = localFont({
+  src: "../fonts/NanumSquareRoundOTFR.otf",
+  variable: "--font-nanum",
+  display: "swap",
+});
+const pretendard = localFont({
+  src: "../fonts/Pretendard-Regular.woff",
+  variable: "--font-pretendard",
+  display: "swap",
+});
+const gowun_batang = Gowun_Batang({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-gowun",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +65,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={pretendard.className}>
+      <body
+        className={` 
+        ${pretendard.variable}
+        ${nanum_square.variable}
+        ${bookk.variable}
+        ${gowun_batang.variable}
+        `}
+      >
         <Header />
         {children}
       </body>

@@ -35,7 +35,7 @@
 
 body {
   p {
-    line-height: normal;
+    line-height: 16px;
   }
   input:active,
   input:focus {

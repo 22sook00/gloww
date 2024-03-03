@@ -2,56 +2,62 @@
  * 디자인 폼
  */
 export const TEMPLATE_ARR = [
-  { templateId: 1, name: "템플릿1" },
-  { templateId: 2, name: "템플릿2" },
-  { templateId: 3, name: "템플릿3" },
+  { templateId: 1, code: "1", name: "템플릿1" },
+  { templateId: 2, code: "2", name: "템플릿2" },
+  { templateId: 3, code: "3", name: "템플릿3" },
+];
+
+export const FONT_ARR = [
+  { fontId: 0, code: "pretendard", name: "기본서체" },
+  { fontId: 1, code: "gowun", name: "고운바탕" },
+  { fontId: 2, code: "bookk", name: "부크명조" },
+  { fontId: 3, code: "nanum", name: "나눔스퀘어" },
 ];
 
 export const EFFECT_ARR = [
-  { effectId: 0, name: "없음" },
-  { effectId: 1, name: "눈 효과" },
-  { effectId: 2, name: "컨페티" },
-  { effectId: 3, name: "물결" },
+  { effectId: 0, code: "none", name: "없음" },
+  { effectId: 1, code: "snow", name: "눈 효과" },
+  { effectId: 2, code: "confetti", name: "컨페티" },
+  { effectId: 3, code: "wave", name: "물결" },
 ];
 
 export const COLOR_ARR = [
-  { colocId: 0, name: "#FFE4E0" },
-  { colocId: 1, name: "#FFF4B8" },
-  { colocId: 2, name: "#F2F8E4" },
-  { colocId: 3, name: "#E4F1F8" },
-  { colocId: 4, name: "#E4E9F8" },
-  { colocId: 5, name: "#616367" },
+  { colocId: 0, code: "#F9F9F9", name: "#F9F9F9" },
+  { colocId: 1, code: "#FFE4E0", name: "#FFE4E0" },
+  { colocId: 2, code: "#FFF4B8", name: "#FFF4B8" },
+  { colocId: 3, code: "#F2F8E4", name: "#F2F8E4" },
+  { colocId: 4, code: "#E4F1F8", name: "#E4F1F8" },
+  { colocId: 5, code: "#E4E9F8", name: "#E4E9F8" },
+  { colocId: 6, code: "#616367", name: "#616367" },
 ];
 
 export const GREETING_ARR = [
-  { greetingId: 0, name: "사랑" },
-  { greetingId: 1, name: "가정" },
-  { greetingId: 2, name: "시국" },
-  { greetingId: 3, name: "존중" },
-  { greetingId: 4, name: "한걸음" },
+  { greetingId: 0, code: "love", name: "사랑" },
+  { greetingId: 1, code: "family", name: "가정" },
+  { greetingId: 2, code: "situation", name: "시국" },
+  { greetingId: 3, code: "respect", name: "존중" },
+  { greetingId: 4, code: "step", name: "한걸음" },
 ];
 
 export const TRANSPORTATION_ARR = [
-  { transportationId: 0, name: "자가용" },
-  { transportationId: 1, name: "버스" },
-  { transportationId: 2, name: "지하철" },
-  { transportationId: 3, name: "도보" },
-  { transportationId: 4, name: "직접 입력" },
+  { transportationId: 0, code: "car", name: "자가용" },
+  { transportationId: 1, code: "bus", name: "버스" },
+  { transportationId: 2, code: "metro", name: "지하철" },
+  { transportationId: 3, code: "direct", name: "직접 입력" },
 ];
 
 export const GALLARY_ARR = [
-  { gallaryId: 0, name: "슬라이드 형" },
-  { gallaryId: 1, name: "갤러리 형" },
-  { gallaryId: 2, name: "앨범 형" },
-  { gallaryId: 3, name: "그리드 형" },
+  { gallaryId: 0, code: "slide", name: "슬라이드 형" },
+  { gallaryId: 1, code: "collague", name: "콜라쥬 형" },
+  { gallaryId: 2, code: "grid", name: "그리드 형" },
 ];
 export const OUTRO_ARR = [
-  { outroId: 0, name: "감사1" },
-  { outroId: 1, name: "감사2" },
-  { outroId: 2, name: "연인 시1" },
-  { outroId: 3, name: "연인 시2" },
-  { outroId: 4, name: "영화 구절1" },
-  { outroId: 5, name: "영화 구절2" },
+  { outroId: 0, code: "thanks1", name: "감사1" },
+  { outroId: 1, code: "thanks2", name: "감사2" },
+  { outroId: 2, code: "poem1", name: "연인 시1" },
+  { outroId: 3, code: "poem2", name: "연인 시2" },
+  { outroId: 4, code: "movie1", name: "영화 구절1" },
+  { outroId: 5, code: "movie2", name: "영화 구절2" },
 ];
 
 /**

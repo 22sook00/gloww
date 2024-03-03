@@ -2,6 +2,7 @@
 import { templateState, weddingDataState } from "@/utils/atom";
 import React, { useEffect } from "react";
 import { useMemo } from "react";
+import { useFormContext, useWatch } from "react-hook-form";
 import { useRecoilState, useRecoilValue } from "recoil";
 import Iphone from "../assets/Iphone";
 import Greeting from "../greeting/Greeting";
@@ -13,6 +14,16 @@ import Template3 from "../template/Template3";
 const MobilePreview = () => {
   const selectTemplateId = useRecoilValue(templateState);
   const [wedding, setWedding] = useRecoilState(weddingDataState);
+
+  const {
+    control,
+    setValue,
+    formState: { errors, dirtyFields },
+  } = useFormContext();
+  const [design] = useWatch({
+    control,
+    name: ["design"],
+  });
 
   const templateSwitch = useMemo(() => {
     switch (selectTemplateId) {
@@ -41,9 +52,29 @@ const MobilePreview = () => {
       });
   }, []);
 
+  //TODO : 훅으로 따로 빼기
+  const useSelectStyle = useMemo(() => {
+    if (!Object.keys(design)?.length) return;
+    const font = design.font;
+    const color = design.color;
+    return {
+      font,
+      color,
+    };
+  }, [design]);
+
+  //bg-[${useSelectStyle?.color}]
+  console.log("design", design.font, useSelectStyle?.color);
+
   return (
-    <aside className="lg:h-[844px] relative ">
-      <div className="flex flex-col h-preview-height lg:fixed top-[124px] overflow-scroll gap-[30px] border-dark-outline border-[8px] rounded-[24px] bg-white">
+    <aside className={`lg:h-[844px] relative font-${useSelectStyle?.font}`}>
+      <div
+        style={{ background: useSelectStyle?.color }}
+        className={`
+      flex flex-col h-preview-height lg:fixed top-[124px] 
+      overflow-scroll gap-[30px] 
+      border-dark-outline border-[8px] rounded-[24px] `}
+      >
         {templateSwitch}
         <Greeting />
         {/*<section>{wedding && <Map location={wedding?.location} />}</section>*/}

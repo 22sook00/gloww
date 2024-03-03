@@ -70,6 +70,10 @@ const config: Config = {
         rubik: ["Rubik"],
         rubikBold: ["Rubik Bold"],
         NotoSansKR: ["Noto Sans KR", "sans-serif"],
+        bookk: ["var(--font-bookk)"],
+        gowun: ["var(--font-gowun)"],
+        nanum: ["var(--font-nanum)"],
+        pretendard: ["var(--font-pretendard)"],
       },
       screens: {
         desktop: "1120px",

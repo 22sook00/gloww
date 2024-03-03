@@ -5,8 +5,13 @@ import { templateState } from "@/utils/atom";
 import { useSetRecoilState } from "recoil";
 import Tab from "../tab/Tab";
 import FormSectionLayout from "../layout/FormSectionLayout";
-import { COLOR_ARR, EFFECT_ARR, TEMPLATE_ARR } from "@/data/staticData";
-import { useFormContext } from "react-hook-form";
+import {
+  COLOR_ARR,
+  EFFECT_ARR,
+  TEMPLATE_ARR,
+  FONT_ARR,
+} from "@/data/staticData";
+import { useFormContext, useWatch } from "react-hook-form";
 import UploadImg from "../img/UploadImg";
 
 const DesignForm = () => {
@@ -19,16 +24,16 @@ const DesignForm = () => {
   const {
     control,
     setValue,
-    watch,
     formState: { errors, dirtyFields },
   } = useFormContext();
 
-  useEffect(() => {
-    console.log("GET::", watch("effect"));
-  }, [watch]);
+  const [design] = useWatch({
+    control,
+    name: ["design"],
+  });
 
   const handleColorClick = (color: string) => {
-    setValue("templateColor", color);
+    setValue("design.color", color);
   };
   return (
     <Dropdown title={"디자인"}>
@@ -36,24 +41,41 @@ const DesignForm = () => {
         <FormSectionLayout subTitle="메인 사진">
           <UploadImg />
         </FormSectionLayout>
-        <FormSectionLayout subTitle="템플릿 디자인">
-          <ul className="flex-row">
+        <FormSectionLayout subTitle="메인 템플릿 디자인">
+          <ul className="w-full h-[192px] grid grid-cols-3 gap-4 ">
             {TEMPLATE_ARR.map((btn) => {
               return (
-                <li key={btn.templateId}>
-                  <button
-                    className="default-btn"
-                    type="button"
-                    onClick={() => handleClickTemplate(btn.templateId)}
-                  >
-                    {btn.name}
-                  </button>
-                </li>
+                <li
+                  key={btn.templateId}
+                  className={`
+                  
+                  ${
+                    design.template === btn.code &&
+                    "border border-light-gray ring-2"
+                  }
+                  w-full bg-slate-300 rounded-md`}
+                  onClick={() => handleClickTemplate(btn.templateId)}
+                ></li>
               );
             })}
           </ul>
         </FormSectionLayout>
-        <FormSectionLayout subTitle="청첩장 컬러">
+        <FormSectionLayout subTitle="메인 폰트">
+          <div className="flex-row">
+            {FONT_ARR.map((font) => {
+              return (
+                <Tab
+                  font={font.code}
+                  value={"design.font"}
+                  key={font.fontId}
+                  text={font.name}
+                  code={font.code}
+                />
+              );
+            })}
+          </div>
+        </FormSectionLayout>
+        <FormSectionLayout subTitle="메인 컬러">
           <div className="flex-row">
             {COLOR_ARR.map((color) => {
               return (
@@ -64,7 +86,7 @@ const DesignForm = () => {
                   cursor-pointer
                   w-[52px] h-[52px] rounded-xl focus:ring-2 ring-offset-2
                   ${
-                    watch("templateColor") === color.name &&
+                    design.color === color.code &&
                     "border border-light-gray ring-2"
                   }
                   `}
@@ -79,9 +101,10 @@ const DesignForm = () => {
             {EFFECT_ARR.map((effect) => {
               return (
                 <Tab
-                  value={"effect"}
+                  value={"design.effect"}
                   key={effect.effectId}
                   text={effect.name}
+                  code={effect.code}
                 />
               );
             })}

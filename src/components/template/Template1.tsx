@@ -12,7 +12,7 @@ const Template1 = () => {
         blurDataURL="/imgs/mainSample.png"
       />
       <div className="flex-center flex-col gap-0">
-        <div className="flex-row gap-6 text-xl mt-6 mb-4 text-default-black">
+        <div className="flex-row gap-6 text-xl mt-6 mb-5 text-default-black">
           <p>이숙영</p>
           <p>&</p>
           <p>허용준</p>

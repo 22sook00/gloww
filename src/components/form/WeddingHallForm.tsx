@@ -8,8 +8,20 @@ import Input from "../input/Input";
 import { TRANSPORTATION_ARR } from "@/data/staticData";
 import Tab from "../tab/Tab";
 import Button from "../button/Button";
+import { useFormContext, useWatch } from "react-hook-form";
 
 const WeddingHallForm = () => {
+  const {
+    control,
+    setValue,
+    formState: { errors, dirtyFields },
+  } = useFormContext();
+
+  const [location] = useWatch({
+    control,
+    name: ["location"],
+  });
+
   const handleClickPostCode = (data: any) => {
     console.log("data", data);
   };
@@ -17,6 +29,7 @@ const WeddingHallForm = () => {
     <Dropdown title="예식장">
       <div className="form-section-layout gap-6">
         <FormSectionLayout subTitle="예식장 주소" checkLabel="지도 이미지 표시">
+          <Input value={"bride"} />
           {/*<DaumPostcode autoClose onComplete={handleClickPostCode} />*/}
           <Search />
         </FormSectionLayout>
@@ -34,6 +47,7 @@ const WeddingHallForm = () => {
                   value={"transportation-1"}
                   key={transportation.transportationId}
                   text={transportation.name}
+                  code={transportation.code}
                 />
               );
             })}
@@ -46,6 +60,7 @@ const WeddingHallForm = () => {
                   value={"transportation-2"}
                   key={transportation.transportationId}
                   text={transportation.name}
+                  code={transportation.code}
                 />
               );
             })}

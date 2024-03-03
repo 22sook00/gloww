@@ -1,30 +1,53 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
 interface TabProps {
   value: string;
   text: string;
+  font?: string;
+  code?: string;
 }
 
-const Tab = ({ value, text }: TabProps) => {
+const Tab = ({ value, text, font = "pretendard", code }: TabProps) => {
   const { setValue, watch } = useFormContext();
   const handleSelect = () => {
-    setValue(value, text);
+    setValue(value, code);
   };
+
+  const selectFont = useMemo(() => {
+    switch (font) {
+      case "bookk":
+        return "font-bookk";
+      case "gowun":
+        return "font-gowun";
+      case "nanum":
+        return "font-nanum";
+      default:
+        return "font-pretendard";
+    }
+  }, [font]);
+
+  useEffect(() => {
+    if (value) {
+      const initValuse = watch(value);
+      setValue(value, initValuse);
+      console.log("initValuse", initValuse);
+    }
+  }, [watch, value]);
 
   return (
     <div
       onClick={handleSelect}
       className={`
       ${
-        watch(value) === text
+        watch(value) === code
           ? " border-default-black text-default-black"
           : "border-tint-gray text-default-gray"
       }
-      w-fit h-[35px] p-2 cursor-pointer border rounded-lg   `}
+      w-fit h-[35px] p-2 cursor-pointer border rounded-lg`}
     >
-      <p>{text}</p>
+      <p className={`${selectFont} leading-[16px]`}>{text}</p>
     </div>
   );
 };
