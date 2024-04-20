@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  //important: true,
+  important: true,
   darkMode: "class",
   mode: "jit",
   content: [
@@ -19,8 +19,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        "show-modal-bg": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "show-modal-box": {
+          "0%": { opacity: "0", marginTop: "-30px" },
+          "100%": { opacity: "1", marginTop: "0" },
+        },
+      },
       animation: {
         "spin-slow": "spin 5s ease infinite",
+        "show-modal-bg": "show-modal-bg 0.3s",
+        "show-modal-box": "show-modal-box 0.5s",
       },
       colors: {
         "opacity-gray": "rgba(40, 40, 40, 0.6)",
@@ -30,8 +42,8 @@ const config: Config = {
         "light-outline": "#DBD9D8",
         "default-outline": "#D5D6D8",
         "dark-outline": "#B9B6B3",
-        "light-black": "#494949",
-        "default-black": "#323130",
+        "light-black": "#615D5C",
+        "default-black": "#272524",
         "dark-black": "#2C2E30",
         "tint-gray": "#EDEFF1",
         "light-gray": "#E9E9E9",
@@ -40,14 +52,19 @@ const config: Config = {
         "check-gray": "#D0D5DD",
         "input-gray": "#f9f9f9",
 
+        "light-yellow": "#fffdf4",
+        "light-pink": "#fffafd",
+        "light-beige": "#fcfaf8",
+        "default-beige": "#fbedc1",
+
         "text-dark": "#333333",
         "text-tint": "#d1d1d1",
         "text-tag-red": "#F8979b",
         "text-tag-yellow": "#FFD951",
-        "error-primary": "#E74346",
-        "error-dark": "#b82a2d",
-        "error-light": "#e4797e",
-        "error-tint": "#FFC7C9",
+        "error-primary": "#fd355d",
+        "error-dark": "#fb0839",
+        "error-light": "#f86280",
+        "error-tint": "#ff869e",
         "warning-primary": "#F7A74D",
         "warning-dark": "#FFD951",
         "warning-light": "#FACB90",
@@ -73,6 +90,7 @@ const config: Config = {
         bookk: ["var(--font-bookk)"],
         gowun: ["var(--font-gowun)"],
         nanum: ["var(--font-nanum)"],
+        myungjo: ["var(--font-myungjo)"],
         pretendard: ["var(--font-pretendard)"],
       },
       screens: {

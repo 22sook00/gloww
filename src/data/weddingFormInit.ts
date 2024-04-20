@@ -121,3 +121,9 @@ export const WEDDING_FORM_INIT: Wedding = {
   },
   attendCount: 1000010,
 };
+
+export const BOARD_FORM_INIT = {
+  name: "",
+  password: null,
+  message: "",
+};

@@ -3,14 +3,15 @@ import { WEDDING_FORM_INIT } from "@/data/weddingFormInit";
 import React from "react";
 import { useForm, FormProvider, useWatch, Controller } from "react-hook-form";
 
-interface FormWrapperProps {
+interface FormWrapperProps<T = { [key: string]: any } | any[]> {
+  initParams?: T;
   children: React.ReactNode;
 }
 
-const FormWrapper = ({ children }: FormWrapperProps) => {
+const FormWrapper = ({ initParams, children }: FormWrapperProps) => {
   const methods = useForm({
     mode: "onChange",
-    defaultValues: { ...WEDDING_FORM_INIT },
+    defaultValues: initParams || { ...WEDDING_FORM_INIT },
   });
 
   const {
@@ -21,6 +22,7 @@ const FormWrapper = ({ children }: FormWrapperProps) => {
     reset,
     setError,
     clearErrors,
+    handleSubmit,
     formState: { isDirty },
   } = methods;
 

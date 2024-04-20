@@ -13,10 +13,13 @@ const FormSectionLayout = ({
 }: FormSectionLayout) => {
   return (
     <section className="form-section-layout">
-      <div className="flex-between ">
-        <p className="text-light-black font-semibold">{subTitle}</p>
-        {checkLabel && <Checkbox label={checkLabel} />}
-      </div>
+      {subTitle ||
+        (checkLabel && (
+          <div className="flex-between ">
+            <p className="text-light-black font-semibold">{subTitle}</p>
+            {checkLabel && <Checkbox label={checkLabel} />}
+          </div>
+        ))}
       {children}
     </section>
   );

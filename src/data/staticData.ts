@@ -63,8 +63,9 @@ export const OUTRO_ARR = [
 /**
  * 인풋 폼
  */
-export const FORM_VALIDATION = {
-  password: /^.{6,20}$/,
+export const FORM_VALIDATION: any = {
+  password: /^.{4,20}$/,
+  name: /^[가-힣a-zA-Z\d\s]+$/,
   groom: /^[가-힣a-zA-Z\d\s]+$/,
   bride: /^[가-힣a-zA-Z\d\s]+$/,
   birth: /^(\d{4})(\d{2})(\d{2})$/,
@@ -72,11 +73,14 @@ export const FORM_VALIDATION = {
   telephone: /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})-?[0-9]{3,4}-?[0-9]{4}$/,
 };
 
-export const FORM_PLACEHOLDER = {
+export const FORM_PLACEHOLDER: any = {
   groom: "신랑 성함 입력",
   bride: "신부 성함 입력",
+  name: "작성하시는 분의 성함을 입력해 주세요",
+  password: "4자~20자 이내의 숫자를 작성해 주세요",
+  message: "신랑 신부에게 전할 축하메세지를 작성해 주세요",
 };
-export const FORM_ERROR = {
+export const FORM_ERROR: any = {
   groom: {
     empty: "아이디를 입력해 주세요.",
     validation: "6자~16자 이내의 영문/숫자로만 입력해 주세요",
@@ -86,6 +90,16 @@ export const FORM_ERROR = {
     empty: "아이디를 입력해 주세요.",
     validation: "6자~16자 이내의 영문/숫자로만 입력해 주세요",
     duplicate: "이미 사용중인 아이디입니다.",
+  },
+  name: {
+    empty: "작성자 이름을 입력해 주세요.",
+  },
+  password: {
+    empty: "비밀번호를 입력해 주세요.",
+    validation: "4자~20자 이내의 숫자를 작성해 주세요",
+  },
+  message: {
+    empty: "신랑 신부에게 전할 축하메세지를 작성해 주세요",
   },
 };
 

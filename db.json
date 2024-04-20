@@ -10,13 +10,13 @@
       "phoneNumber": "01071852791",
       "parents": [
         {
-          "name": "류영만",
+          "name": "허철근",
           "relationship": "father",
           "phoneNumber": "01053242422",
           "isDead": false
         },
         {
-          "name": "봉미선",
+          "name": "강혜자",
           "relationship": "mother",
           "phoneNumber": "01054912252",
           "isDead": false
@@ -53,7 +53,7 @@
         {
           "relationship": "father",
           "bankName": "국민",
-          "accountNumber": "5562-02-123433",
+          "accountNumber": "556202-04-072388",
           "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
         }
       ],
@@ -61,8 +61,8 @@
         {
           "relationship": "bride",
           "isSame": true,
-          "bankName": "우리",
-          "accountNumber": "110-356-123433",
+          "bankName": "국민",
+          "accountNumber": "556202-04-072388",
           "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
         },
         {
@@ -78,11 +78,11 @@
       "type": "step"
     },
     "location": {
-      "lat": 37.28163212324522,
-      "lng": 127.0303329958705,
-      "name": "월드컵컨벤션 웨딩홀",
-      "detail": "3F 노블레스홀",
-      "address": "서울 마포구 월드컵로 240 2층\n상암 월드컵컨벤션 웨딩홀",
+      "lat": 37.568724,
+      "lng": 126.8966651,
+      "name": "상암 월드컵컨벤션 웨딩홀",
+      "detail": "임페리얼 홀",
+      "address": "서울 마포구 월드컵로 240 2층",
       "link": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,506715,1050669&rt1=&rt2=%EC%88%98%EC%9B%90%EB%85%B8%EB%B8%94%EB%A0%88%EC%8A%A4%EC%9B%A8%EB%94%A9%EC%BB%A8%EB%B2%A4%EC%85%98&rtIds=,9846217",
       "isMap": true,
       "waytocome": [
@@ -97,8 +97,7 @@
         {
           "type": "car",
           "content": "월드컵경기장 서문 진입 후 서측 1,2 주차장 이용 \n주차 접수대 사전 등록 후 출차 (90분 무료) \n경기·행사일 서측 주차장 만차 시 주차 요원 안내에 따라 \n 난지천공원, 평화의공원, 마포구청 이용 (2시간 무료)"
-        },
-        { "type": "direct", "content": "걸어서" }
+        }
       ]
     },
     "galleryImages": [

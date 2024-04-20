@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps {
-  size?: "sm" | "md" | "lg" | "full";
+  size?: "xs" | "sm" | "md" | "lg" | "full";
   theme?: "primary" | "secondary" | "error" | "outline";
   customStyle?: string | number | undefined;
   children: React.ReactNode;
@@ -20,7 +20,9 @@ const Button = ({
   customStyle,
 }: ButtonProps) => {
   const sizeProps =
-    size === "sm"
+    size === "xs"
+      ? "min-w-[60px] w-fit h-[32px] p-3 text-xs"
+      : size === "sm"
       ? "min-w-[80px] w-fit h-[41px] p-3 text-sm"
       : size === "md"
       ? "min-w-[100px] h-[43px] p-3"
@@ -43,10 +45,10 @@ const Button = ({
     <button
       type={type}
       onClick={onClick}
-      className={`${sizeProps ?? customStyle} ${themeProps ?? customStyle} 
+      className={`${sizeProps ?? customStyle} ${customStyle ?? themeProps} 
     ${
       disabled &&
-      "cursor-not-allowed bg-opacity-30 text-gray-dark border-opacity-30"
+      "cursor-not-allowed bg-light-gray text-light-black border-opacity-30 hover:bg-light-gray"
     } font-semibold transition-all flex justify-center items-center rounded-md `}
       disabled={disabled}
     >

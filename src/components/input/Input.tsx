@@ -9,7 +9,8 @@ import { useFormContext } from "react-hook-form";
 
 interface InputProps {
   //TODO type 고쳐야함.
-  value: keyof typeof WEDDING_OBJ;
+  //value: keyof typeof WEDDING_OBJ;
+  value: any;
   onChange?: any;
   onBlur?: any;
   validateFunc?: any;
@@ -25,6 +26,8 @@ interface InputProps {
   maxLength?: number;
   errFocus?: any;
   isPw?: boolean;
+  isTextarea?: boolean;
+  label?: string;
 }
 
 const Input = ({
@@ -44,6 +47,8 @@ const Input = ({
   maxLength = 100,
   errFocus,
   isPw = false,
+  isTextarea = false,
+  label,
   ...props
 }: InputProps) => {
   const {
@@ -54,50 +59,86 @@ const Input = ({
 
   const getMaxLengthValue = (value: string) =>
     value.length > maxLength ? value.slice(0, maxLength) : value;
-  const [changeType, setChangeType] = useState(isPw ? "password" : "text");
-  const handleChangeType = () => {
-    changeType === "text" ? setChangeType("password") : setChangeType("text");
-  };
+
   return (
-    <>
-      <input
-        className="w-full h-[43px] px-3 bg-input-gray border border-tint-gray rounded"
-        readOnly={isReadOnly}
-        placeholder={placeholder || FORM_PLACEHOLDER[value]}
-        {...register(value, {
-          required: {
-            value: isRequired,
-            message: requiredMsg ? requiredMsg : FORM_ERROR[value]?.empty,
-          },
-          pattern: {
-            value: validatePattern ? validatePattern : FORM_VALIDATION[value],
-            message: validationMsg
-              ? validationMsg
-              : FORM_ERROR[value]?.validation, // 에러 메세지
-          },
-          onChange: (e) => {
-            if (maxLength)
-              setValue(value, getMaxLengthValue(e.target.value), {
-                shouldValidate: true,
-                shouldDirty: true,
-              });
-            if (changeEvent) changeEvent(e);
-          },
-          onBlur: onBlur,
-          validate: validateFunc && {
-            check: validateFunc,
-          },
-        })}
-        maxLength={maxLength}
-        type={changeType}
-        {...props}
-      />
+    <div className="relative w-full">
+      {label && <p className="text-sm mb-1">{label}</p>}
+
+      {isTextarea ? (
+        <textarea
+          className="focus-ring w-full h-[120px] p-3 border border-tint-gray rounded resize-none placeholder:text-sm"
+          readOnly={isReadOnly}
+          placeholder={placeholder || FORM_PLACEHOLDER[value]}
+          {...register(value, {
+            required: {
+              value: isRequired,
+              message: requiredMsg ? requiredMsg : FORM_ERROR[value]?.empty,
+            },
+            pattern: {
+              value: validatePattern ? validatePattern : FORM_VALIDATION[value],
+              message: validationMsg
+                ? validationMsg
+                : FORM_ERROR[value]?.validation, // 에러 메세지
+            },
+            onChange: (e) => {
+              if (maxLength)
+                setValue(value, getMaxLengthValue(e.target.value), {
+                  shouldValidate: true,
+                  shouldDirty: true,
+                });
+              if (changeEvent) changeEvent(e);
+            },
+            onBlur: onBlur,
+            validate: validateFunc && {
+              check: validateFunc,
+            },
+          })}
+          maxLength={maxLength}
+          {...props}
+        />
+      ) : (
+        <input
+          className="focus-ring placeholder:text-sm
+          w-full h-[43px] px-3  border border-tint-gray rounded"
+          readOnly={isReadOnly}
+          placeholder={placeholder || FORM_PLACEHOLDER[value]}
+          {...register(value, {
+            required: {
+              value: isRequired,
+              message: requiredMsg ? requiredMsg : FORM_ERROR[value]?.empty,
+            },
+            pattern: {
+              value: validatePattern ? validatePattern : FORM_VALIDATION[value],
+              message: validationMsg
+                ? validationMsg
+                : FORM_ERROR[value]?.validation, // 에러 메세지
+            },
+            onChange: (e) => {
+              if (maxLength)
+                setValue(value, getMaxLengthValue(e.target.value), {
+                  shouldValidate: true,
+                  shouldDirty: true,
+                });
+              if (changeEvent) changeEvent(e);
+            },
+            onBlur: onBlur,
+            validate: validateFunc && {
+              check: validateFunc,
+            },
+          })}
+          maxLength={maxLength}
+          type={isPw ? "password" : "text"}
+          {...props}
+        />
+      )}
 
       <>
         {errors[value] && (
-          <p style={{ position: "absolute", right: "0" }}>
-            {/*{errors[value].message }*/}
-            error
+          <p
+            className="absolute right-0 top-[2px] text-[10px] leading-4 text-error-primary"
+            style={{ position: "absolute", right: "0" }}
+          >
+            {(value && errors[value]?.message) || "올바른 텍스트를 입력하세요."}
           </p>
         )}
         {!errors[value] && dirtyFields[value] && (
@@ -127,7 +168,7 @@ const Input = ({
           </p>
         )}
       </>
-    </>
+    </div>
   );
 };
 

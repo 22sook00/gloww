@@ -53,9 +53,14 @@
   .default-btn {
     @apply bg-primary text-white px-3 py-1 rounded-md;
   }
-
   .dashed-horizon-line {
     @apply my-10 border-dashed border-b-4;
+  }
+  .sub-title {
+    @apply text-xs tracking-[5px] text-[#774b20] font-bookk;
+  }
+  .focus-ring {
+    @apply focus:ring-offset-2 focus:ring-2 ring-default-beige;
   }
 }
 
@@ -64,11 +69,17 @@
 
 body {
   p {
-    line-height: 16px;
+    line-height: 28px;
   }
   input:active,
-  input:focus {
+  input:focus,
+  textarea:active,
+  textarea:focus {
     outline: none;
+  }
+
+  &.hidden-scroll {
+    overflow: hidden !important;
   }
 }
 
@@ -76,4 +87,29 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.mantine-DatePicker-calendarHeader {
+  display: none !important;
+}
+.mantine-focus-auto[data-selected] {
+  background: #494949 !important;
+  border-radius: 50%;
+}
+.mantine-DatePicker-day:not([data-selected]):hover,
+.mantine-DatePicker-day:not([data-selected]):focus {
+  background-color: transparent !important;
+
+  border-color: transparent !important;
+  cursor: default !important;
+}
+
+.day,
+.mantine-DatePicker-monthRow,
+.mantine-focus-auto {
+  cursor: default !important;
+  font-size: 13px !important;
+}
+.mantine-DatePicker {
+  pointer-events: none;
 }
