@@ -15,7 +15,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-[50px] px-[15px] bg-light-beige flex-col-default items-center">
+    <section className="py-[50px] px-[15px] bg-light-beige flex-col-default items-center shadow-sm">
       <p className="sub-title">GALLERY</p>
       <p>갤러리</p>
       <div>

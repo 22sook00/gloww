@@ -1,11 +1,49 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
+import { useRecoilValue } from "recoil";
+import { weddingDataState } from "@/utils/atom";
+import Dropdown from "@/components/dropdown/Dropdown";
+import Link from "next/link";
+import Image from "next/image";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import Button from "@/components/button/Button";
+import Dialog from "@/components/dialog/Dialog";
+import AccountContent from "./AccountContent";
 
 const Account = () => {
+  const { account } = useRecoilValue(weddingDataState);
+  const [isOpenCopyAlert, setIsOpenCopyAlert] = useState(false);
+  const handleCopyAlert = () => {
+    setIsOpenCopyAlert(true);
+    setTimeout(() => {
+      setIsOpenCopyAlert(false);
+    }, 1500);
+  };
   return (
-    <section className=" py-[50px] flex-col-default items-center shadow-md">
+    <section className=" py-[50px]  px-[15px] flex-col-default items-center shadow-sm">
       <div className="flex flex-col justify-center items-center mb-4">
         <p className="leading-7">마음 전하실 곳</p>
       </div>
+
+      <Dropdown title={"신랑측"}>
+        <AccountContent
+          accountArr={account.groom}
+          handleCopyAlert={handleCopyAlert}
+        />
+      </Dropdown>
+      <Dropdown title={"신부측"}>
+        <AccountContent
+          accountArr={account.bride}
+          handleCopyAlert={handleCopyAlert}
+        />
+      </Dropdown>
+
+      {isOpenCopyAlert && (
+        <Dialog handleClosePopup={() => setIsOpenCopyAlert(false)}>
+          <div className="flex-col-default items-center">
+            <p className="text-lg">복사가 완료되었습니다.</p>
+          </div>
+        </Dialog>
+      )}
     </section>
   );
 };

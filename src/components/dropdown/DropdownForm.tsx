@@ -8,25 +8,25 @@ interface DropdownProps {
   children: React.ReactNode;
 }
 
-const Dropdown = ({ title, children }: DropdownProps) => {
+const DropdownForm = ({ title, children }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpenClick = () => {
     setIsOpen((prev) => !prev);
   };
 
   return (
-    <div className="relative w-full text-left border rounded-md">
+    <div className="relative w-full text-left border rounded-[16px]">
       <button
         type="button"
-        className={`flex w-full justify-between rounded-md
-        ${isOpen && "rounded-bl-none rounded-br-none "}
-        p-4 bg-white ring-gray-300 `}
+        className={`flex w-full justify-between rounded-[16px]
+        ${isOpen && "rounded-bl-none rounded-br-none hover:bg-white"}
+        p-6 bg-white ring-gray-300 hover:bg-gray-50`}
         id="menu-button"
         aria-expanded="true"
         aria-haspopup="true"
         onClick={handleOpenClick}
       >
-        <p className="leading-[18px] font-semibold text-sm text-gray-900 ">
+        <p className="leading-[18px] font-semibold text-lg text-gray-900 ">
           {title}
         </p>
         {isOpen ? <ArrowUp /> : <ArrowDown />}
@@ -35,7 +35,7 @@ const Dropdown = ({ title, children }: DropdownProps) => {
       {isOpen && (
         <div
           className="w-ull bg-white 
-        rounded-[16px] px-4 rounded-tr-none rounded-tl-none  shadow-lg  focus:outline-none"
+        rounded-[16px] px-6 rounded-tr-none rounded-tl-none  shadow-lg  focus:outline-none"
           role="menu"
           aria-orientation="vertical"
         >
@@ -52,4 +52,4 @@ const Dropdown = ({ title, children }: DropdownProps) => {
   );
 };
 
-export default Dropdown;
+export default DropdownForm;

@@ -13,7 +13,7 @@ const Date = () => {
   const [value, setValue] = useState();
 
   return (
-    <section className=" py-[50px] flex-col-default items-center shadow-md">
+    <section className=" py-[50px] flex-col-default items-center shadow">
       <p className="sub-title">THE WEDDING DAY</p>
       <div className="flex flex-col justify-center items-center mb-4">
         <p className="leading-7">{datePart}</p>

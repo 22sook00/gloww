@@ -37,16 +37,38 @@ export const weddingDataState = atom({
       ],
     },
     groom: {
-      name: "",
+      name: "허용준",
       account: {},
       parents: [{ name: "", account: {}, phoneNumber: "" }],
       phoneNumber: null,
     },
     bride: {
-      name: "",
+      name: "이숙영",
       account: {},
       parents: [{ name: "", account: {}, phoneNumber: "" }],
       phoneNumber: null,
+    },
+    account: {
+      groom: [
+        {
+          holder: "",
+          relationship: "",
+          isSame: true,
+          bankName: "",
+          accountNumber: "",
+          kakaopayLink: "",
+        },
+      ],
+      bride: [
+        {
+          holder: "",
+          relationship: "",
+          isSame: true,
+          bankName: "",
+          accountNumber: "",
+          kakaopayLink: "",
+        },
+      ],
     },
     message: {},
     galleryImages: [],

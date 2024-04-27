@@ -51,7 +51,7 @@ const Board = () => {
   const [isOpenAllBoard, setIsOpenAllBoard] = useState(false);
 
   return (
-    <section className=" py-[50px]  px-[15px] bg-light-beige flex-col-default items-center shadow-md">
+    <section className=" py-[50px]  px-[15px] bg-light-beige flex-col-default items-center shadow-sm">
       <p className="sub-title">GUEST BOOK</p>
       <div className="flex flex-col justify-center items-center mb-4">
         <p className="leading-7">따뜻한 마음을</p>

@@ -11,7 +11,7 @@ const Location = () => {
   const { location } = useRecoilValue(weddingDataState);
 
   return (
-    <section className="py-[50px] px-[15px]  flex-col-default items-center">
+    <section className="py-[50px] px-[15px]  flex-col-default items-center shadow-sm">
       <p className="sub-title">LOCATION</p>
       <p>오시는길</p>
       <div className="flex flex-col justify-center items-center my-4">
@@ -77,7 +77,11 @@ const Location = () => {
               <p className=" = font-semibold">
                 {formatTransportation[transportation.type]}
               </p>
-              <p className="text-light-black text-sm break-keep leading-6">
+              <p
+                className="
+               whitespace-pre-line
+              text-light-black text-sm break-keep leading-6"
+              >
                 {transportation.content}
               </p>
             </div>

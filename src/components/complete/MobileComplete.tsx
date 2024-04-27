@@ -2,15 +2,19 @@
 import { weddingDataState } from "@/utils/atom";
 import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import Greeting from "../greeting/Greeting";
-import Board from "../preview/board/Board";
-import Date from "../preview/date/Date";
-import Gallery from "../preview/gallery/Gallery";
-import Location from "../preview/location/Location";
-import Template1 from "../template/Template1";
+import Footer from "@/components/footer/Footer";
+
+import Greeting from "@/components/greeting/Greeting";
+
+import Template1 from "@/components/template/Template1";
+import Share from "@/components/preview/share/Share";
+import Account from "@/components/preview/account/Account";
+import Location from "@/components/preview/location/Location";
+import Gallery from "@/components/preview/gallery/Gallery";
+import Board from "@/components/preview/board/Board";
+import Date from "@/components/preview/date/Date";
 
 const MobileComplete = () => {
-  //const [wedding, setWedding] = useState();
   const [wedding, setWedding] = useRecoilState(weddingDataState);
 
   useEffect(() => {
@@ -30,20 +34,23 @@ const MobileComplete = () => {
   }, []);
 
   return (
-    <div className={`text-default-black  flex-center relative font-myungjo`}>
+    <div className={`text-default-black flex-center relative font-myungjo`}>
       <div
         className={` w-full max-w-[406px] flex flex-col
         overflow-scroll lg:rounded-[24px] shadow-md `}
       >
-        <div className="relative ">
+        <div className="relative shadow-sm">
           <Template1 />
         </div>
         <Greeting />
-        {/*<Date />*/}
+        <Date />
         <Gallery />
         <Location />
         <Board />
+        <Account />
+        <Share />
         {/*<section>{wedding && <Map location={wedding?.location} />}</section>*/}
+        <Footer />
       </div>
     </div>
   );

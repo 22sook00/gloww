@@ -7,7 +7,7 @@ const Greeting = () => {
   const { groom, bride } = useRecoilValue(weddingDataState);
 
   return (
-    <section className="bg-light-beige p-[30px]">
+    <section className="bg-light-beige p-[30px] shadow-sm">
       <article className="bg-white py-10 px-6">
         <h3 className="text-lg mb-6">결혼합니다</h3>
         <p className="text-sm leading-[32px] text-default-gray">

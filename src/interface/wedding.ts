@@ -72,6 +72,7 @@ export interface Account {
   accountNumber: string;
   kakaopayLink: string;
   isSame?: boolean;
+  holder: string;
 }
 
 export interface Board {

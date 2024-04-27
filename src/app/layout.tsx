@@ -3,7 +3,7 @@ import { Gowun_Batang, Nanum_Myeongjo } from "next/font/google";
 import localFont from "next/font/local";
 
 import { siteMetadata } from "@/utils/siteMetaData";
-import "@style/globals.css";
+import "@/style/globals.css";
 
 const bookk = localFont({
   src: "./fonts/bookk_regular.ttf",
@@ -37,9 +37,8 @@ export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
   icons: {
-    icon: "/imgs/logo.png",
+    icon: "/imgs/glowwLogo.png",
   },
-  //https://nextjs.org/docs/app/api-reference/functions/generate-metadata#opengraph
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
@@ -71,13 +70,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` 
-        ${pretendard.variable}
-        ${nanum_square.variable}
-        ${bookk.variable}
-        ${gowun_batang.variable}
-        ${nanum_myungjo.variable}
-        `}
+        className={`
+      ${pretendard.variable}
+      ${nanum_square.variable}
+      ${bookk.variable}
+      ${gowun_batang.variable}
+      ${nanum_myungjo.variable}
+      `}
       >
         {children}
       </body>

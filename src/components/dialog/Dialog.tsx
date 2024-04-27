@@ -4,7 +4,7 @@ import Close from "../assets/Close";
 
 interface DialogProps {
   children: React.ReactNode;
-  handleClosePopup: () => void;
+  handleClosePopup?: () => void;
   title?: string;
 }
 
@@ -42,7 +42,7 @@ const Dialog = ({ handleClosePopup, title, children }: DialogProps) => {
           className="absolute top-0 left-0 w-full h-full overflow-hidden"
         />
 
-        <div className="relative flex-col flex w-[90%] min-w-[300px] max-w-[370px] min-h-[200px] max-h-[80%]  p-0 bg-white animate-show-modal-box rounded shadow-lg">
+        <div className="relative flex-col flex w-[90%] min-w-[300px] max-w-[370px] min-h-[150px] max-h-[80%]  p-0 bg-white animate-show-modal-box rounded shadow-lg">
           <header className="flex-between w-full h-10 p-8">
             <div className="w-full text-center text-base leading-[18px] break-keep font-semibold">
               {title}

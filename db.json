@@ -44,32 +44,36 @@
     "account": {
       "groom": [
         {
+          "holder": "허용준",
           "relationship": "groom",
           "isSame": true,
           "bankName": "신한",
           "accountNumber": "110-356-123433",
-          "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
+          "kakaopayLink": "https://link.kakaopay.com/_/R_EKw_5"
         },
         {
-          "relationship": "father",
+          "holder": "허수지",
+          "relationship": "sister",
           "bankName": "국민",
           "accountNumber": "556202-04-072388",
-          "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
+          "kakaopayLink": "https://link.kakaopay.com/_/R_EKw_5"
         }
       ],
       "bride": [
         {
+          "holder": "이숙영",
           "relationship": "bride",
           "isSame": true,
           "bankName": "국민",
           "accountNumber": "556202-04-072388",
-          "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
+          "kakaopayLink": "https://link.kakaopay.com/_/R_EKw_5"
         },
         {
-          "relationship": "sister",
+          "holder": "박예경",
+          "relationship": "mother",
           "bankName": "케이뱅크",
           "accountNumber": "25562-032-123433",
-          "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
+          "kakaopayLink": "https://link.kakaopay.com/_/R_EKw_5"
         }
       ]
     },

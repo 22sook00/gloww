@@ -57,12 +57,14 @@ export const WEDDING_FORM_INIT: Wedding = {
         bankName: "",
         accountNumber: "",
         kakaopayLink: "",
+        holder: "",
       },
       {
         relationship: "",
         bankName: "",
         accountNumber: "",
         kakaopayLink: "",
+        holder: "",
       },
     ],
     bride: [
@@ -72,6 +74,7 @@ export const WEDDING_FORM_INIT: Wedding = {
         bankName: "",
         accountNumber: "",
         kakaopayLink: "",
+        holder: "",
       },
     ],
   },
