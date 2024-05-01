@@ -73,17 +73,23 @@ const Location = () => {
             className="w-full flex-col-default gap-8"
             key={`transportation-${idx}`}
           >
-            <div className="flex-col-default gap-3">
-              <p className=" = font-semibold">
-                {formatTransportation[transportation.type]}
-              </p>
-              <p
-                className="
+            <div
+              data-aos="fade-up"
+              data-aos-offset="300"
+              data-aos-duration="2000"
+            >
+              <div className="flex-col-default gap-3">
+                <p className=" = font-semibold">
+                  {formatTransportation[transportation.type]}
+                </p>
+                <p
+                  className="
                whitespace-pre-line
               text-light-black text-sm break-keep leading-6"
-              >
-                {transportation.content}
-              </p>
+                >
+                  {transportation.content}
+                </p>
+              </div>
             </div>
           </div>
         );

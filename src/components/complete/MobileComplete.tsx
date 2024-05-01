@@ -2,6 +2,9 @@
 import { weddingDataState } from "@/utils/atom";
 import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Footer from "@/components/footer/Footer";
 
 import Greeting from "@/components/greeting/Greeting";
@@ -33,6 +36,10 @@ const MobileComplete = () => {
       });
   }, []);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className={`text-default-black flex-center relative font-myungjo`}>
       <div
@@ -42,6 +49,7 @@ const MobileComplete = () => {
         <div className="relative shadow-sm">
           <Template1 />
         </div>
+
         <Greeting />
         <Date />
         <Gallery />
@@ -49,6 +57,7 @@ const MobileComplete = () => {
         <Board />
         <Account />
         <Share />
+
         {/*<section>{wedding && <Map location={wedding?.location} />}</section>*/}
         <Footer />
       </div>
