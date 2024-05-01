@@ -35,6 +35,13 @@
       "@/data/*": [
         "src/data/*"
       ],
+      "@/firebase/*": [
+        "src/firebase/*"
+      ],
+      "@/interface/*":[
+        "src/interface/*"
+      ], 
+      
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

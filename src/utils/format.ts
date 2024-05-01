@@ -8,6 +8,11 @@ export const formatDate = (dateString: string) => {
   return { datePart, timePart };
 };
 
+export const formatBoardDate = (dateString: string) => {
+  const date = dayjs(dateString);
+  return date.format("YYYY-MM-DD_hh:mm");
+};
+
 export const formatTransportation: Record<string, string> = {
   metro: "지하철",
   bus: "버스",

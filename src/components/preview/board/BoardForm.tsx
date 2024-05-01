@@ -1,14 +1,22 @@
-import React, { FC, useMemo } from "react";
+import React, { FC, SetStateAction, useMemo } from "react";
 import FormWrapper from "@/components/form/FormWrapper";
 import Input from "@/components/input/Input";
 import FormSectionLayout from "@/components/layout/FormSectionLayout";
 import { useFormContext, useWatch } from "react-hook-form";
 import Button from "@/components/button/Button";
+import { v4 as uuidv4 } from "uuid";
+import { BoardFormProps } from "@/interface/boardForm";
 
-interface BoardFormProps {
+interface BoardFormCompProps {
   setIsOpenBoardForm: React.Dispatch<React.SetStateAction<boolean>>;
+  getAllBoardList: any;
+  setBoardList: React.Dispatch<SetStateAction<BoardFormProps[]>>;
 }
-const BoardForm: FC<BoardFormProps> = ({ setIsOpenBoardForm }) => {
+const BoardForm: FC<BoardFormCompProps> = ({
+  setIsOpenBoardForm,
+  getAllBoardList,
+  setBoardList,
+}) => {
   const {
     control,
     setValue,
@@ -16,26 +24,46 @@ const BoardForm: FC<BoardFormProps> = ({ setIsOpenBoardForm }) => {
     formState: { errors, dirtyFields },
   } = useFormContext();
 
-  const [name, password, message] = useWatch({
+  const [writer, password, message] = useWatch({
     control,
-    name: ["name", "password", "message"],
+    name: ["writer", "password", "message"],
   });
 
   const isDisableSubmit = useMemo(() => {
-    if (!name) return true;
+    if (!writer) return true;
     if (!password) return true;
     if (!message) return true;
     return false;
-  }, [name, password, message]);
+  }, [writer, password, message]);
 
-  const handleSubmitMessage = (data: any) => {
-    console.log("FORM DATA", data);
-    setIsOpenBoardForm(false);
+  const handleSubmitMessage = async (data: any) => {
+    const id = uuidv4();
+    const response = await fetch("/api/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id, ...data }),
+    });
+
+    if (response.ok) {
+      console.log("Post created successfully");
+      // 폼 리셋 또는 성공 처리 로직
+      setIsOpenBoardForm(false);
+      const data = async () => {
+        const { data } = await getAllBoardList();
+        setBoardList(data);
+      };
+      data();
+    } else {
+      console.error("Failed to create post");
+      //setIsOpenBoardForm(false);
+    }
   };
   return (
     <form onSubmit={handleSubmit(handleSubmitMessage)}>
       <FormSectionLayout>
-        <Input value={"name"} label={"작성자 이름"} />
+        <Input value={"writer"} label={"작성자 이름"} />
         <Input value={"password"} isPw label={"비밀번호"} />
         <Input value={"message"} isTextarea label={"축하메세지"} />
 
