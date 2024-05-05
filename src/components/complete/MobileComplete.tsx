@@ -2,7 +2,6 @@
 import { weddingDataState } from "@/utils/atom";
 import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Footer from "@/components/footer/Footer";
@@ -15,7 +14,7 @@ import Account from "@/components/preview/account/Account";
 import Location from "@/components/preview/location/Location";
 import Gallery from "@/components/preview/gallery/Gallery";
 import Board from "@/components/preview/board/Board";
-import Date from "@/components/preview/date/Date";
+//import Date from "@/components/preview/date/Date";
 
 const MobileComplete = () => {
   const [wedding, setWedding] = useRecoilState(weddingDataState);
@@ -36,14 +35,10 @@ const MobileComplete = () => {
       });
   }, []);
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <div className={`text-default-black flex-center relative font-myungjo`}>
       <div
-        className={` w-full max-w-[406px] flex flex-col
+        className={`w-full max-w-[406px] flex flex-col
         overflow-scroll lg:rounded-[24px] shadow-md `}
       >
         <div className="relative shadow-sm">
@@ -51,7 +46,7 @@ const MobileComplete = () => {
         </div>
 
         <Greeting />
-        <Date />
+        {/*<Date />*/}
         <Gallery />
         <Location />
         <Board />

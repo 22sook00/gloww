@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import CallIcon from "@/components/assets/Call";
 import { useRecoilValue } from "recoil";
 import { weddingDataState } from "@/utils/atom";
+import Fade from "@/components/effect/Fade";
 
 const Greeting = () => {
   const { groom, bride } = useRecoilValue(weddingDataState);
 
   return (
     <section className="bg-light-beige p-[30px] shadow-sm">
-      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        <article className="bg-white py-10 px-6">
+      <article className="bg-white py-10 px-6">
+        <Fade>
           <h3 className="text-lg mb-6">결혼합니다</h3>
+
           <p className="text-sm leading-[32px] text-default-gray">
             서로가 마주보며 다져온 사랑을 <br />
             이제 함께 한 곳을 바라보며 <br />
@@ -23,7 +26,10 @@ const Greeting = () => {
             <br />
             앞날을 축복해 주시면 감사하겠습니다.
           </p>
-          <div className="my-8 border border-light-outline" />
+        </Fade>
+
+        <div className="my-8 border border-light-outline" />
+        <Fade>
           <div className=" text-sm text-default-black flex-row justify-around gap-1 mb-2">
             <h5 className="">
               {groom.parents[0]?.name}﹒{groom.parents[1]?.name}
@@ -46,8 +52,8 @@ const Greeting = () => {
               <CallIcon />
             </a>
           </div>
-        </article>
-      </div>
+        </Fade>
+      </article>
     </section>
   );
 };

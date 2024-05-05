@@ -1,3 +1,4 @@
+import Fade from "@/components/effect/Fade";
 import ImageViewer from "@/components/img/ImgViewer";
 import { imgLink } from "@/utils/link";
 import Image from "next/image";
@@ -16,11 +17,13 @@ const Gallery = () => {
 
   return (
     <section className="py-[50px] px-[15px] bg-light-beige flex-col-default items-center shadow-sm">
-      <div data-aos="fade-up" className=" flex-col-default items-center">
-        <p className="sub-title">GALLERY</p>
-        <p>갤러리</p>
-      </div>
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <Fade>
+        <div className=" flex-col-default items-center">
+          <p className="sub-title">GALLERY</p>
+          <p>갤러리</p>
+        </div>
+      </Fade>
+      <Fade>
         <div>
           <div className="grid grid-cols-3 gap-2 mt-4 mb-2">
             <div className="col-span-2 row-span-2">
@@ -81,7 +84,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Fade>
       <ImageViewer
         open={open}
         onClose={handleClose}

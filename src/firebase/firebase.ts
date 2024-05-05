@@ -11,6 +11,8 @@ import {
   setDoc,
   Timestamp,
   deleteDoc,
+  query,
+  orderBy,
 } from "firebase/firestore";
 
 const {
@@ -38,7 +40,9 @@ export const db = getFirestore(app);
 
 //모든 축하게시글 가져오기
 export async function fetchPosts() {
-  const querySnapshot = await getDocs(collection(db, "posts"));
+  const postRef = collection(db, "posts");
+  const descQuery = query(postRef, orderBy("created_at", "desc"));
+  const querySnapshot = await getDocs(descQuery);
   if (querySnapshot.empty) {
     return [];
   }

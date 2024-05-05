@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { BOARD_FORM_INIT } from "@/data/weddingFormInit";
 import { BoardFormProps, INIT_BOARD_FORM } from "@/interface/boardForm";
 import { formatBoardDate } from "@/utils/format";
+import Fade from "@/components/effect/Fade";
 
 const Board = () => {
   const [boardList, setBoardList] = useState<BoardFormProps[]>([
@@ -30,34 +31,39 @@ const Board = () => {
 
   return (
     <section className=" py-[50px]  px-[15px] bg-light-beige flex-col-default items-center shadow-sm">
-      <p className="sub-title">GUEST BOOK</p>
-      <div className="flex flex-col justify-center items-center mb-4">
-        <p className="leading-7">따뜻한 마음을</p>
-        <p className="leading-7">축하의 글로 남겨주세요.</p>
-      </div>
-
+      <Fade>
+        <p className="sub-title">GUEST BOOK</p>
+        <div className="flex flex-col justify-center items-center mb-4">
+          <p className="leading-7">따뜻한 마음을</p>
+          <p className="leading-7">축하의 글로 남겨주세요.</p>
+        </div>
+      </Fade>
       {boardList?.length > 0 ? (
-        <div className="flex-col-default w-full ">
-          {boardList?.slice(0, 3).map((msg) => {
-            return (
-              <article
-                key={msg.id}
-                className="rounded-md shadow p-4 font-pretendard text-sm w-full bg-white border border-tint-gray"
-              >
-                <div className="flex-between mb-2  ">
-                  <p className=" font-bold">{msg.writer}</p>
-                  <p className="text-dark-outline">
-                    {" "}
-                    {formatBoardDate(msg.created_at || "")}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-light-black"></p>
-                  {msg.message}
-                </div>
-              </article>
-            );
-          })}
+        <div className="w-full ">
+          <Fade delay="500">
+            <div className="flex-col-default ">
+              {boardList?.slice(0, 3).map((msg) => {
+                return (
+                  <article
+                    key={msg.id}
+                    className="rounded-md shadow p-4 font-pretendard text-sm w-full bg-white border border-tint-gray"
+                  >
+                    <div className="flex-between mb-2  ">
+                      <p className=" font-bold">{msg.writer}</p>
+                      <p className="text-dark-outline">
+                        {" "}
+                        {formatBoardDate(msg.created_at || "")}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-light-black"></p>
+                      {msg.message}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </Fade>
         </div>
       ) : (
         <div>아직 작성된 방명록이 없습니다.</div>
