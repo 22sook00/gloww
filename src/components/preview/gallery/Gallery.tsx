@@ -76,7 +76,7 @@ const Gallery = () => {
               <Image
                 src={imgLink[5].url}
                 alt="Large"
-                className="w-full h-auto  rounded-sm cursor-pointer object-cover"
+                className="w-full h-full  rounded-sm cursor-pointer object-cover"
                 width={100}
                 height={100}
                 onClick={() => handleSelectedImg(imgLink[5].id)}

@@ -14,3 +14,17 @@
 .swiper-slide img {
   width: 100%;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 20px !important;
+  height: 20px !important;
+  color: #334155 !important;
+  &:after {
+    font-size: 20px !important;
+    font-weight: 700;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: #334155 !important;
+}

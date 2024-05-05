@@ -6,12 +6,12 @@ const Template1 = () => {
     <section className="py-[50px] px-[15px]">
       <div className="relative ">
         <Image
-          src="/imgs/mainSample8.png"
+          src="/imgs/mainSample0.jpg"
           alt="sample1"
           width={330}
           height={100}
           placeholder="blur"
-          blurDataURL="/imgs/mainSample.png"
+          blurDataURL="/imgs/mainSample0.jpg"
           className="w-full rounded-sm"
         />
         <Wave />

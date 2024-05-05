@@ -28,6 +28,7 @@ const Location = () => {
           <div className="grid grid-cols-3 gap-2 font-pretendard text-sm mb-7">
             <Link
               href={locationLink.naver}
+              target={"_blank"}
               className="
           shadow 
           border-1 

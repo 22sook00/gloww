@@ -7,10 +7,10 @@ export const locationLink = {
 };
 
 export const imgLink = [
-  { id: 0, url: "/imgs/mainSample1.png" },
-  { id: 1, url: "/imgs/mainSample2.png" },
-  { id: 2, url: "/imgs/mainSample3.png" },
-  { id: 3, url: "/imgs/mainSample4.png" },
-  { id: 4, url: "/imgs/mainSample5.png" },
-  { id: 5, url: "/imgs/mainSample6.png" },
+  { id: 0, url: "/imgs/mainSample1.jpg" },
+  { id: 1, url: "/imgs/mainSample2.jpg" },
+  { id: 2, url: "/imgs/mainSample3.jpg" },
+  { id: 3, url: "/imgs/mainSample4.jpg" },
+  { id: 4, url: "/imgs/mainSample5.jpg" },
+  { id: 5, url: "/imgs/mainSample6.jpg" },
 ];

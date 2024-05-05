@@ -6,7 +6,7 @@ export const siteMetadata = {
   description: "gloww_커스터마이징_청첩장",
   language: "ko_kr",
   theme: "system", // system, dark or light
-  siteUrl: "https://next-sookdev.vercel.app/",
+  siteUrl: "https://gloww.vercel.app/",
   metadataBase: new URL("http://localhost:3000"),
   siteLogo: "/imgs/glowwLogo.png",
   socialBanner: "/imgs/glowwLogo.png", // add social banner in the public folder

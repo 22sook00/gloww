@@ -35,7 +35,7 @@ const Dropdown = ({ title, children }: DropdownProps) => {
       {isOpen && (
         <div
           className="w-ull bg-white 
-        rounded-[16px] px-4 rounded-tr-none rounded-tl-none  shadow-lg  focus:outline-none"
+        rounded-md px-4 rounded-tr-none rounded-tl-none  shadow-lg  focus:outline-none"
           role="menu"
           aria-orientation="vertical"
         >
