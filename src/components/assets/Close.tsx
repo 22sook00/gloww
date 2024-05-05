@@ -5,7 +5,7 @@ const Close = ({
   className,
 }: {
   onClose?: () => void;
-  className: string;
+  className?: string;
 }) => {
   return (
     <svg
