@@ -1,11 +1,10 @@
 import React, { ChangeEvent, useRef, useState } from "react";
 import Image from "next/image";
 import { useFormContext, useWatch } from "react-hook-form";
-import { ReactSortable } from "react-sortablejs";
-import XIcon from "@/components/assets/Close";
 import Spinner from "../loading/Spinner";
 import UploadIcon from "@/components/assets/Upload";
 import EditIcon from "@/components/assets/Edit";
+import CloseCircle from "@/components/assets/CloseCircle";
 
 const MAX_FILE_SIZE = 1024 ** 2 * 20; // 20MB
 
@@ -67,7 +66,7 @@ const UploadImg = ({ type = "edit" }) => {
                   setImageSrc(null);
                 }}
               >
-                <XIcon />
+                <CloseCircle />
               </div>
             )}
             <Image
