@@ -9,28 +9,33 @@ const bookk = localFont({
   src: "./fonts/bookk_regular.ttf",
   variable: "--font-bookk",
   display: "swap",
+  adjustFontFallback: false,
 });
 const nanum_square = localFont({
   src: "./fonts/NanumSquareRoundOTFR.otf",
   variable: "--font-nanum",
   display: "swap",
+  adjustFontFallback: false,
 });
 const pretendard = localFont({
   src: "./fonts/Pretendard-Regular.woff",
   variable: "--font-pretendard",
   display: "swap",
+  adjustFontFallback: false,
 });
 const gowun_batang = Gowun_Batang({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-gowun",
   weight: "400",
+  adjustFontFallback: false,
 });
 const nanum_myungjo = Nanum_Myeongjo({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-myungjo",
   weight: "400",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
