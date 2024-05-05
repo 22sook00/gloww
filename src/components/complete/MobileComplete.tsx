@@ -14,7 +14,7 @@ import Account from "@/components/preview/account/Account";
 import Location from "@/components/preview/location/Location";
 import Gallery from "@/components/preview/gallery/Gallery";
 import Board from "@/components/preview/board/Board";
-//import Date from "@/components/preview/date/Date";
+import Date from "@/components/preview/date/Date";
 
 const MobileComplete = () => {
   const [wedding, setWedding] = useRecoilState(weddingDataState);
@@ -46,7 +46,7 @@ const MobileComplete = () => {
         </div>
 
         <Greeting />
-        {/*<Date />*/}
+        <Date />
         <Gallery />
         <Location />
         <Board />

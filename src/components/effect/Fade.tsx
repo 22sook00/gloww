@@ -19,7 +19,7 @@ interface FadeProps {
 const Fade = ({
   children,
   duration = "1500",
-  isOnce = "false",
+  isOnce = "true",
   delay = "0",
   offset = "0",
   easing = "linear",

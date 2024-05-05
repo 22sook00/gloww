@@ -30,17 +30,19 @@ const Board = () => {
   const [isOpenAllBoard, setIsOpenAllBoard] = useState(false);
 
   return (
-    <section className=" py-[50px]  px-[15px] bg-light-beige flex-col-default items-center shadow-sm">
+    <section className=" py-[50px]  px-[15px] bg-light-beige  shadow-sm">
       <Fade>
-        <p className="sub-title">GUEST BOOK</p>
-        <div className="flex flex-col justify-center items-center mb-4">
-          <p className="leading-7">따뜻한 마음을</p>
-          <p className="leading-7">축하의 글로 남겨주세요.</p>
+        <div className="flex-col-default items-center">
+          <p className="sub-title">GUEST BOOK</p>
+          <div className="flex flex-col justify-center items-center mb-4">
+            <p className="leading-7">따뜻한 마음을</p>
+            <p className="leading-7">축하의 글로 남겨주세요.</p>
+          </div>
         </div>
       </Fade>
       {boardList?.length > 0 ? (
-        <div className="w-full ">
-          <Fade delay="500">
+        <div className="w-full">
+          <Fade>
             <div className="flex-col-default ">
               {boardList?.slice(0, 3).map((msg) => {
                 return (
@@ -69,7 +71,7 @@ const Board = () => {
         <div>아직 작성된 방명록이 없습니다.</div>
       )}
 
-      <div className="w-full font-pretendard flex justify-end gap-2">
+      <div className="w-full font-pretendard flex justify-end gap-2 mt-3">
         <Button
           onClick={() => setIsOpenAllBoard(true)}
           customStyle={"bg-default-beige"}
