@@ -7,11 +7,10 @@ export const siteMetadata = {
   language: "ko_kr",
   theme: "system", // system, dark or light
   siteUrl: "https://next-sookdev.vercel.app/",
+  metadataBase: new URL("http://localhost:3000"),
   siteLogo: "/imgs/glowwLogo.png",
   socialBanner: "/imgs/glowwLogo.png", // add social banner in the public folder
   email: "22sook00@gmail.com",
   github: "https://github.com/22sook00",
-  facebook: "https://facebook.com",
-  linkedin: "https://www.linkedin.com/in/22sook00/",
   locale: "ko_KR",
 };

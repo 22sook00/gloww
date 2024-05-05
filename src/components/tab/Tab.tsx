@@ -32,7 +32,6 @@ const Tab = ({ value, text, font = "pretendard", code }: TabProps) => {
     if (value) {
       const initValuse = watch(value);
       setValue(value, initValuse);
-      console.log("initValuse", initValuse);
     }
   }, [watch, value]);
 

@@ -55,7 +55,7 @@ const Input = ({
     register,
     setValue,
     formState: { errors, dirtyFields },
-  } = useFormContext();
+  } = useFormContext<{ [x: string]: string }>();
 
   const getMaxLengthValue = (value: string) =>
     value.length > maxLength ? value.slice(0, maxLength) : value;
@@ -138,7 +138,7 @@ const Input = ({
             className="absolute right-0 top-[2px] text-[10px] leading-4 text-error-primary"
             style={{ position: "absolute", right: "0" }}
           >
-            {(value && errors[value]?.message) || "올바른 텍스트를 입력하세요."}
+            {errors[value]?.message || "올바른 텍스트를 입력하세요."}
           </p>
         )}
         {!errors[value] && dirtyFields[value] && (

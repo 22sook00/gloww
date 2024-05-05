@@ -49,7 +49,6 @@ export async function fetchPosts() {
   const postList = [] as BoardFormProps[];
 
   querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
     const post = {
       id: doc.id,
       created_at: doc.data()["created_at"].toDate(),
@@ -86,7 +85,6 @@ export async function fetchPost(id: string) {
   const postDocSnap = (await getDoc(postDocRef)) as any;
 
   if (postDocSnap.exists()) {
-    console.log("doc", postDocSnap.data());
     const post = {
       id: postDocSnap.id,
       created_at: postDocSnap.data()["created_at"].toDate(),

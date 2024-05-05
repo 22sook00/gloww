@@ -65,9 +65,6 @@ const MobilePreview = () => {
     };
   }, [design]);
 
-  //bg-[${useSelectStyle?.color}]
-  console.log("design", design.font, useSelectStyle?.color);
-
   return (
     <aside className={`lg:h-[844px] relative font-${useSelectStyle?.font}`}>
       <div

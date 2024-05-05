@@ -4,7 +4,7 @@ import { Gowun_Batang } from "next/font/google";
 import localFont from "next/font/local";
 
 import { siteMetadata } from "@/utils/siteMetaData";
-import "@style/globals.css";
+import "@/style/globals.css";
 
 const bookk = localFont({
   src: "../fonts/bookk_regular.ttf",

@@ -22,9 +22,6 @@ const WeddingHallForm = () => {
     name: ["location"],
   });
 
-  const handleClickPostCode = (data: any) => {
-    console.log("data", data);
-  };
   return (
     <Dropdown title="예식장">
       <div className="form-section-layout gap-6">
