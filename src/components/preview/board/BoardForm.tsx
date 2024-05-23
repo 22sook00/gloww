@@ -65,11 +65,11 @@ const BoardForm: FC<BoardFormCompProps> = ({
       <FormSectionLayout>
         <Input value={"writer"} label={"작성자 이름"} />
         <Input value={"password"} isPw label={"비밀번호"} />
-        <Input value={"message"} isTextarea label={"축하메세지"} />
+        <Input value={"message"} isTextarea label={"축하메시지"} />
 
         {/*TODO isLoading 추가하기*/}
         <Button size="full" type="submit" disabled={isDisableSubmit}>
-          축하메세지 남기기
+          축하메시지 남기기
         </Button>
       </FormSectionLayout>
     </form>

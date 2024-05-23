@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Gowun_Batang, Nanum_Myeongjo } from "next/font/google";
+import { Gowun_Batang, Nanum_Myeongjo, Amiri } from "next/font/google";
 import localFont from "next/font/local";
 
 import { siteMetadata } from "@/utils/siteMetaData";
@@ -21,6 +21,13 @@ const pretendard = localFont({
   src: "./fonts/Pretendard-Regular.woff",
   variable: "--font-pretendard",
   display: "swap",
+  adjustFontFallback: false,
+});
+const amiri = Amiri({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-amiri",
+  weight: "400",
   adjustFontFallback: false,
 });
 const gowun_batang = Gowun_Batang({
@@ -79,6 +86,7 @@ export default function RootLayout({
       ${pretendard.variable}
       ${nanum_square.variable}
       ${bookk.variable}
+      ${amiri.variable}
       ${gowun_batang.variable}
       ${nanum_myungjo.variable}
       `}

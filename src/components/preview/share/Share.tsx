@@ -54,8 +54,8 @@ const Share = () => {
         {
           title: "청첩장 보러가기",
           link: {
-            mobileWebUrl: window.location.origin,
-            webUrl: window.location.origin,
+            mobileWebUrl: window.location.origin || "https://gloww.vercel.app/",
+            webUrl: window.location.origin || "https://gloww.vercel.app/",
           },
         },
       ],

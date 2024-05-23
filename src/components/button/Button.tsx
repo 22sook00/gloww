@@ -23,7 +23,7 @@ const Button = ({
     size === "xs"
       ? "min-w-[60px] w-fit h-[32px] p-3 text-xs"
       : size === "sm"
-      ? "min-w-[80px] w-fit h-[41px] p-3 text-sm"
+      ? "min-w-[80px] w-fit h-[38px] p-3 text-sm"
       : size === "md"
       ? "min-w-[100px] h-[43px] p-3"
       : size === "lg"
@@ -49,7 +49,7 @@ const Button = ({
     ${
       disabled &&
       "cursor-not-allowed bg-light-gray text-light-black border-opacity-30 hover:bg-light-gray"
-    } font-semibold transition-all flex justify-center items-center rounded-md `}
+    } font-medium transition-all flex justify-center items-center rounded-md `}
       disabled={disabled}
     >
       {children}

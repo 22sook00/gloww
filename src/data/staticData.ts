@@ -76,9 +76,10 @@ export const FORM_VALIDATION: any = {
 export const FORM_PLACEHOLDER: any = {
   groom: "신랑 성함 입력",
   bride: "신부 성함 입력",
+  writer: "작성하시는 분의 성함을 입력해 주세요",
   name: "작성하시는 분의 성함을 입력해 주세요",
   password: "4자~20자 이내의 숫자를 작성해 주세요",
-  message: "신랑 신부에게 전할 축하메세지를 작성해 주세요",
+  message: "신랑 신부에게 전할 축하메시지를 작성해 주세요",
 };
 export const FORM_ERROR: any = {
   groom: {
@@ -99,7 +100,7 @@ export const FORM_ERROR: any = {
     validation: "4자~20자 이내의 숫자를 작성해 주세요",
   },
   message: {
-    empty: "신랑 신부에게 전할 축하메세지를 작성해 주세요",
+    empty: "신랑 신부에게 전할 축하메시지를 작성해 주세요",
   },
 };
 

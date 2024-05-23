@@ -1,11 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { weddingDataState } from "@/utils/atom";
 import Dropdown from "@/components/dropdown/Dropdown";
-import Link from "next/link";
-import Image from "next/image";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import Button from "@/components/button/Button";
+
 import Dialog from "@/components/dialog/Dialog";
 import AccountContent from "./AccountContent";
 
@@ -19,7 +16,7 @@ const Account = () => {
     }, 1500);
   };
   return (
-    <section className=" py-[50px]  px-[15px] flex-col-default items-center shadow-sm">
+    <section className=" py-[50px]  px-[15px] flex-col-default gap-4 items-center shadow-sm">
       <div className="flex flex-col justify-center items-center mb-4">
         <p className="leading-7">마음 전하실 곳</p>
       </div>

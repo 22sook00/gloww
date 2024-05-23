@@ -71,7 +71,7 @@ const Dialog = ({
             </header>
           )}
           <div
-            className={`${isBackground ? "px-6 pb-8" : "p-0"} overflow-scroll`}
+            className={`${isBackground ? "px-4 pb-8" : "p-0"} overflow-scroll`}
           >
             {!isBackground && (
               <div onClick={handleClosePopup} className="cursor-pointer">

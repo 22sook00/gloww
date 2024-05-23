@@ -44,6 +44,7 @@ const AccountContent = ({
                   >
                     <Link href={list.kakaopayLink} target={"_blank"}>
                       <Image
+                        priority={true}
                         src="/imgs/kakaopay.png"
                         alt="kakao-pay"
                         width={32}

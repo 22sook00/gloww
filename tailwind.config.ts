@@ -54,7 +54,7 @@ const config: Config = {
 
         "light-yellow": "#fffdf4",
         "light-pink": "#fffafd",
-        "light-beige": "#fcfaf8",
+        "light-beige": "#F6F5F1",
         "default-beige": "#fbedc1",
 
         "text-dark": "#333333",
@@ -90,6 +90,7 @@ const config: Config = {
         bookk: ["var(--font-bookk)"],
         gowun: ["var(--font-gowun)"],
         nanum: ["var(--font-nanum)"],
+        amiri: ["var(--font-amiri)"],
         myungjo: ["var(--font-myungjo)"],
         pretendard: ["var(--font-pretendard)"],
       },

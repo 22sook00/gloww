@@ -31,41 +31,39 @@ const Board = () => {
 
   return (
     <section className=" py-[50px]  px-[15px] bg-light-beige  shadow-sm">
-      <Fade>
-        <div className="flex-col-default items-center">
-          <p className="sub-title">GUEST BOOK</p>
-          <div className="flex flex-col justify-center items-center mb-4">
-            <p className="leading-7">따뜻한 마음을</p>
-            <p className="leading-7">축하의 글로 남겨주세요.</p>
-          </div>
+      <div className="flex-col-default items-center">
+        <p className="sub-title">GUEST BOOK</p>
+        <div className="flex flex-col justify-center items-center mb-4">
+          <p className="leading-7">따뜻한 마음을</p>
+          <p className="leading-7">축하의 글로 남겨주세요.</p>
         </div>
-      </Fade>
+      </div>
+
       {boardList?.length > 0 ? (
-        <div className="w-full">
-          <Fade>
-            <div className="flex-col-default ">
-              {boardList?.slice(0, 3).map((msg) => {
-                return (
-                  <article
-                    key={msg.id}
-                    className="rounded-md shadow p-4 font-pretendard text-sm w-full bg-white border border-tint-gray"
-                  >
-                    <div className="flex-between mb-2  ">
-                      <p className=" font-bold">{msg.writer}</p>
-                      <p className="text-dark-outline">
-                        {" "}
-                        {formatBoardDate(msg.created_at || "")}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-light-black"></p>
-                      {msg.message}
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </Fade>
+        <div className="w-full mt-4">
+          <div className="flex-col-default gap-2">
+            {boardList?.slice(0, 3).map((msg) => {
+              return (
+                <article
+                  key={msg.id}
+                  className="
+                  h-[106px] rounded-md shadow p-4 font-pretendard text-sm w-full bg-white border border-tint-gray"
+                >
+                  <div className="flex-between mb-2  h-fit">
+                    <p className=" font-bold">{msg.writer}</p>
+                    <p className="text-dark-outline">
+                      {" "}
+                      {formatBoardDate(msg.created_at || "")}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-light-black"></p>
+                    {msg.message}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         </div>
       ) : (
         <div>아직 작성된 방명록이 없습니다.</div>
@@ -75,14 +73,14 @@ const Board = () => {
         <Button
           onClick={() => setIsOpenAllBoard(true)}
           customStyle={"bg-default-beige"}
-          size="xs"
+          size="sm"
         >
           전체보기
         </Button>
         <Button
           onClick={() => setIsOpenBoardForm(true)}
           customStyle={"bg-default-beige"}
-          size="xs"
+          size="sm"
         >
           작성하기
         </Button>
@@ -93,15 +91,16 @@ const Board = () => {
           title={"방명록 전체보기"}
           handleClosePopup={() => setIsOpenAllBoard(false)}
         >
-          <div className="flex-col-default w-full ">
+          <div className="flex-col-default w-full gap-4 p-4">
             {boardList?.map((msg) => {
               return (
                 <article
                   key={msg.id}
-                  className="rounded-md shadow p-4 font-pretendard text-sm w-full bg-white border border-tint-gray"
+                  className="
+                  rounded-md shadow p-4 font-pretendard text-sm w-full bg-white border border-tint-gray"
                 >
                   <div className="flex-between mb-2  ">
-                    <p className=" font-bold">{msg.writer}</p>
+                    <p className=" font-medium">{msg.writer}</p>
                     <p className="text-dark-outline">
                       {formatBoardDate(msg.created_at || "")}
                     </p>
