@@ -14,8 +14,8 @@ export const imgLink = [
   { id: 5, url: "/imgs/mainSample3.jpg" },
   { id: 6, url: "/imgs/mainSample12.jpg" },
   { id: 7, url: "/imgs/mainSample5.jpg" },
-  { id: 8, url: "/imgs/mainSample9.jpg" },
+  { id: 8, url: "/imgs/mainSample1.jpg" },
   { id: 9, url: "/imgs/mainSample8.jpg" },
-  { id: 10, url: "/imgs/mainSample1.jpg" },
-  { id: 11, url: "/imgs/mainSample14.jpg" },
+  { id: 10, url: "/imgs/mainSample14.jpg" },
+  { id: 11, url: "/imgs/mainSample9.jpg" },
 ];

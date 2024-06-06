@@ -116,3 +116,8 @@ body {
 .textshadow {
   text-shadow: 1px 1px 30px #000;
 }
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}

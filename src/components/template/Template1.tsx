@@ -5,16 +5,17 @@ const Template1 = () => {
   return (
     <section className="pb-[50px] ">
       <div className="relative min-h-[514px]">
-        <video
-          data-v-83965f94=""
-          id="intro-player"
-          autoPlay={true}
-          loop={true}
-          muted={true}
-          className="w-full max-h-[600px] opacity-100 visible absolute left-0 mix-blend-screen	"
-        >
-          <source src="/flower_00.mp4" />
-        </video>
+        <div className="w-full max-h-[500px]  absolute left-0 mix-blend-screen	">
+          <video
+            id="intro-player"
+            autoPlay={true}
+            loop={true}
+            muted={true}
+            className="w-full max-h-[500px] opacity-100 visible 	"
+          >
+            <source src="/flower_00.mp4" />
+          </video>
+        </div>
         <Image
           src="/imgs/mainSample0.jpg"
           alt="sample1"
