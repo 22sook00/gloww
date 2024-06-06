@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Wave from "../effect/Wave";
+import { siteMetadata } from "@/src/utils/siteMetaData";
 const Template1 = () => {
   return (
     <section className="pb-[50px] ">

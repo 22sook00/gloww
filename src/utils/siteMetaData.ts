@@ -3,13 +3,13 @@ export const siteMetadata = {
   title: "𝙔𝙅 & 𝙎𝙔 𝙒𝙚𝙙𝙙𝙞𝙣𝙜",
   author: "22SOOK00",
   headerTitle: "gloww_wedding card",
-  description: "gloww_커스터마이징_청첩장",
+  description: `허용준, 이숙영 결혼합니다.\n9월 7일 토요일 오후 12시 20분`,
   language: "ko_kr",
   theme: "system", // system, dark or light
   siteUrl: "https://gloww.vercel.app/",
   metadataBase: new URL("https://gloww.vercel.app/"),
-  siteLogo: "/imgs/glowwLogo.png",
-  socialBanner: "/imgs/glowwLogo.png", // add social banner in the public folder
+  siteLogo: "imgs/logo.png",
+  socialBanner: "imgs/mainSample8.jpg", // add social banner in the public folder
   email: "22sook00@gmail.com",
   github: "https://github.com/22sook00",
   locale: "ko_KR",

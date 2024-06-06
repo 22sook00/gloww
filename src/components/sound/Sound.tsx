@@ -3,7 +3,7 @@ import SoundIcon from "@/src/components/assets/SoundIcon";
 import SoundOffIcon from "@/src/components/assets/SoundOffIcon";
 
 const Sound = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
 
   useEffect(() => {
