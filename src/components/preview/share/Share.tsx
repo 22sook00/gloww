@@ -37,8 +37,10 @@ const Share = () => {
     window.Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: `${data.groom.name}, ${data.bride.name} 결혼합니다.`,
-        description: `${
+        title: `𝙔𝙅 & 𝙎𝙔 𝙒𝙚𝙙𝙙𝙞𝙣𝙜`,
+        description: `
+        ${data.groom.name}, ${data.bride.name} 결혼합니다. \n
+        ${
           (dayjs(weddingDate),
           dayjs(weddingDate).format("M월 D일 dddd h시 m분"))
         }`,

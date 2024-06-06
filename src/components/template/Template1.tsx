@@ -1,13 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import Wave from "../effect/Wave";
-import { siteMetadata } from "@/src/utils/siteMetaData";
 const Template1 = () => {
   return (
     <section className="pb-[50px] ">
       <div className="relative min-h-[514px]">
+        <video
+          data-v-83965f94=""
+          id="intro-player"
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          className="w-full max-h-[600px] opacity-100 visible absolute left-0 mix-blend-screen	"
+        >
+          <source src="/flower_00.mp4" />
+        </video>
         <Image
-          src="/imgs/textmain-lightpink.png"
+          src="/imgs/mainSample0.jpg"
           alt="sample1"
           width={330}
           height={100}
@@ -19,7 +28,7 @@ const Template1 = () => {
         <Wave />
       </div>
       <div className="flex-center flex-col gap-0">
-        <div className="flex-row gap-6 text-[21px] mt-8 mb-6 text-default-black font-medium tracking-[5px]">
+        <div className="flex-row gap-6 text-[21px] mt-10 mb-6 text-default-black font-medium tracking-[5px]">
           <p>허용준</p>
           <p>&</p>
           <p>이숙영</p>

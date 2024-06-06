@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { weddingDataState } from "@/utils/atom";
 import { useRecoilState } from "recoil";
-import "aos/dist/aos.css";
 
 import Footer from "@/components/footer/Footer";
 

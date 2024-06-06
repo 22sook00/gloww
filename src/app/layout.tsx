@@ -56,7 +56,12 @@ export const metadata: Metadata = {
     description: siteMetadata.description,
     url: siteMetadata.siteUrl,
     siteName: siteMetadata.title,
-    images: [siteMetadata.socialBanner],
+    images: [
+      {
+        url: "imgs/mainSample8.jpg",
+        alt: "thumbnail",
+      },
+    ],
     locale: "ko_KR",
     type: "website",
   },
