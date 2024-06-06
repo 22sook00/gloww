@@ -22,7 +22,7 @@ const AccountContent = ({
           <Fragment key={`groom-account-${idx}`}>
             <div className="flex-between items-start">
               <div>
-                <p>
+                <p className="no-underline">
                   {list.bankName} | {list.accountNumber}
                 </p>
                 <p>(예금주 : {list?.holder || "허용준"})</p>

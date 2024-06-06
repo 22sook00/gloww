@@ -7,7 +7,7 @@ export const siteMetadata = {
   language: "ko_kr",
   theme: "system", // system, dark or light
   siteUrl: "https://gloww.vercel.app/",
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://gloww.vercel.app/"),
   siteLogo: "/imgs/glowwLogo.png",
   socialBanner: "/imgs/glowwLogo.png", // add social banner in the public folder
   email: "22sook00@gmail.com",

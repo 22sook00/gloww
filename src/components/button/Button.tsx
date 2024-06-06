@@ -38,7 +38,7 @@ const Button = ({
       : theme === "secondary"
       ? `bg-tint-gray text-default-black hover:bg-light-gray`
       : theme === "outline"
-      ? `bg-white border border-default-black hover:border-primary-dark focus:outline-none `
+      ? `bg-white border border-default-outline hover:border-primary-dark focus:outline-none `
       : undefined;
 
   return (
