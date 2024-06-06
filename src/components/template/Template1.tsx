@@ -3,17 +3,17 @@ import Image from "next/image";
 import Wave from "../effect/Wave";
 const Template1 = () => {
   return (
-    <section className="py-[50px] px-[15px]">
+    <section className="pb-[50px] ">
       <div className="relative min-h-[514px]">
         <Image
-          src="/imgs/mainSample0.jpg"
+          src="/imgs/textmain-lightpink.png"
           alt="sample1"
           width={330}
           height={100}
           placeholder="blur"
           priority={true}
           blurDataURL="/imgs/mainSample0.jpg"
-          className="w-full rounded-sm"
+          className="w-full "
         />
         <Wave />
       </div>

@@ -14,6 +14,8 @@ import Account from "@/components/preview/account/Account";
 import Location from "@/components/preview/location/Location";
 import Gallery from "@/components/preview/gallery/Gallery";
 import Board from "@/components/preview/board/Board";
+import Sound from "@/src/components/sound/Sound";
+import Outro from "@/src/components/preview/outro/Outro";
 
 const Share = dynamic(() => import("@/components/preview/share/Share"), {
   ssr: false,
@@ -49,6 +51,7 @@ const MobileComplete = () => {
         overflow-scroll lg:rounded-[24px] shadow-md `}
       >
         <div className="relative shadow-sm">
+          <Sound />
           <Template1 />
         </div>
 
@@ -56,8 +59,10 @@ const MobileComplete = () => {
         <Date />
         <Gallery />
         <Location />
-        <Board />
+        {/*<Board />*/}
         <Account />
+        {/*outro*/}
+        <Outro />
         <Share />
 
         <Footer />

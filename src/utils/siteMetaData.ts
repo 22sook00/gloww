@@ -1,6 +1,6 @@
 // please update required information
 export const siteMetadata = {
-  title: "gloww_card 🫧",
+  title: "𝙔𝙅 & 𝙎𝙔 𝙒𝙚𝙙𝙙𝙞𝙣𝙜",
   author: "22SOOK00",
   headerTitle: "gloww_wedding card",
   description: "gloww_커스터마이징_청첩장",

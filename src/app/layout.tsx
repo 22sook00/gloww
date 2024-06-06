@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
   icons: {
-    icon: "/imgs/glowwLogo.png",
+    icon: "/imgs/logo.png",
   },
   openGraph: {
     title: siteMetadata.title,

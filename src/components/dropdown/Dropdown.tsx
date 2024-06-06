@@ -15,40 +15,6 @@ const Dropdown = ({ title, children }: DropdownProps) => {
   };
 
   return (
-    //<div className="relative w-full text-left border rounded-md">
-    //  <button
-    //    type="button"
-    //    className={`flex w-full justify-between rounded-md
-    //    ${isOpen && "rounded-bl-none rounded-br-none "}
-    //    p-4 bg-white ring-gray-300 `}
-    //    id="menu-button"
-    //    aria-expanded="true"
-    //    aria-haspopup="true"
-    //    onClick={handleOpenClick}
-    //  >
-    //    <p className="leading-[18px] font-semibold text-sm text-gray-900 ">
-    //      {title}
-    //    </p>
-    //    {isOpen ? <ArrowUp /> : <ArrowDown />}
-    //  </button>
-
-    //  {isOpen && (
-    //    <div
-    //      className="w-ull bg-white
-    //    rounded-md px-4 rounded-tr-none rounded-tl-none  shadow  focus:outline-none"
-    //      role="menu"
-    //      aria-orientation="vertical"
-    //    >
-    //      <div
-    //        className="
-    //     border-t-[0.75px] border-default-outline py-6"
-    //        role="none"
-    //      >
-    //        {children}
-    //      </div>
-    //    </div>
-    //  )}
-    //</div>
     <div className="relative w-full text-left border rounded-md">
       <button
         type="button"
@@ -60,9 +26,7 @@ const Dropdown = ({ title, children }: DropdownProps) => {
         aria-haspopup="true"
         onClick={handleOpenClick}
       >
-        <p className="leading-[18px] font-semibold text-sm text-gray-900">
-          {title}
-        </p>
+        <p className="leading-[18px]  text-sm text-gray-900">{title}</p>
         {isOpen ? <ArrowUp /> : <ArrowDown />}
       </button>
 

@@ -7,7 +7,7 @@ import FormSectionLayout from "../layout/FormSectionLayout";
 const AccountForm = () => {
   return (
     <Dropdown title={"마음 전하실 곳"}>
-      <div className="form-section-layout gap-6">
+      <div className="form-section-layout gap-6 ">
         <FormSectionLayout subTitle="신랑 계좌번호" checkLabel="예금주 동일">
           <Input value={"groom"} />
         </FormSectionLayout>

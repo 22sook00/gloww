@@ -30,7 +30,7 @@ const ImageViewer = ({
         loop={true}
         initialSlide={selectedIdx}
         navigation
-        pagination={{ clickable: true }}
+        //pagination={{ clickable: true }}
       >
         {images.map((src, idx) => {
           return (
@@ -38,7 +38,7 @@ const ImageViewer = ({
               <img
                 src={src.url}
                 alt="img"
-                className="rounded object-cover h-full"
+                className="rounded object-contain h-full"
               />
             </SwiperSlide>
           );

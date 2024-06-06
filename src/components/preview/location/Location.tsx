@@ -77,7 +77,7 @@ const Location = () => {
               className="w-full flex-col-default gap-8"
               key={`transportation-${idx}`}
             >
-              <div className="flex-col-default gap-3">
+              <div className="flex-col-default gap-2">
                 <p className=" = font-semibold">
                   {formatTransportation[transportation.type]}
                 </p>

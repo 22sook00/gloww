@@ -48,7 +48,15 @@ const Dialog = ({
           onClick={handleClosePopup}
           className="absolute top-0 left-0 w-full h-full overflow-hidden"
         />
-
+        {!isBackground && (
+          <div onClick={handleClosePopup} className="cursor-pointer">
+            <Close
+              className={
+                "w-4 h-4 text-white absolute top-2.5 right-4 z-10 cursor-pointer"
+              }
+            />
+          </div>
+        )}
         <div
           className={`relative flex-col flex w-[90%] min-w-[300px] max-w-[370px] min-h-[150px] max-h-[80%]  p-0
         ${isBackground ? "bg-white" : " bg-transparent"}
@@ -73,15 +81,6 @@ const Dialog = ({
           <div
             className={`${isBackground ? "px-4 pb-8" : "p-0"} overflow-scroll`}
           >
-            {!isBackground && (
-              <div onClick={handleClosePopup} className="cursor-pointer">
-                <Close
-                  className={
-                    "w-4 h-4 text-white absolute top-2.5 right-2.5 z-10 cursor-pointer"
-                  }
-                />
-              </div>
-            )}
             {children}
           </div>
         </div>

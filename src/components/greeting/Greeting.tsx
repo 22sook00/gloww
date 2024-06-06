@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import CallIcon from "@/components/assets/Call";
 import { useRecoilValue } from "recoil";
 import { weddingDataState } from "@/utils/atom";
+import Dot from "@/src/components/assets/Dot";
 
 const Greeting = () => {
   const { groom, bride } = useRecoilValue(weddingDataState);
@@ -32,7 +33,11 @@ const Greeting = () => {
           </h5>
           <span className="text-default-gray">의 장남</span>
           <h5 className=" font-semibold">용준</h5>
-          <span className="text-light-outline tracking-[-5px]">﹒﹒﹒</span>
+          <div className="flex gap-2">
+            <Dot />
+            <Dot />
+            <Dot />
+          </div>
           <a className="cursor-pointer" href={`tel:${groom?.phoneNumber}`}>
             <CallIcon />
           </a>
@@ -43,7 +48,11 @@ const Greeting = () => {
           </h5>
           <span className="text-default-gray"> 의 장녀 </span>
           <h5 className=" font-semibold">숙영</h5>
-          <span className="text-light-outline  tracking-[-5px]">﹒﹒﹒</span>
+          <div className="flex gap-2">
+            <Dot />
+            <Dot />
+            <Dot />
+          </div>
           <a className="cursor-pointer" href={`tel:${bride?.phoneNumber}`}>
             <CallIcon />
           </a>
