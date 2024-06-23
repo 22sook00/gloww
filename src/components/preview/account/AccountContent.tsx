@@ -22,8 +22,9 @@ const AccountContent = ({
           <Fragment key={`groom-account-${idx}`}>
             <div className="flex-between items-start">
               <div>
-                <p className="no-underline">
-                  {list.bankName} | {list.accountNumber}
+                <p>
+                  <span>{list.bankName}</span> |{" "}
+                  <span className="no-underline">{list.accountNumber}</span>
                 </p>
                 <p className="text-default-gray">
                   예금주 : {list?.holder || "허용준"}
@@ -31,7 +32,7 @@ const AccountContent = ({
               </div>
               <div>
                 <CopyToClipboard
-                  text={`${list.bankName} ${list.accountNumber}`}
+                  text={`${list.accountNumber}`}
                   onCopy={handleCopyAlert}
                 >
                   <Button size="xs" theme="outline">

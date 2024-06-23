@@ -81,6 +81,16 @@ body {
   &.hidden-scroll {
     overflow: hidden !important;
   }
+  .no-underline {
+    text-decoration: none !important;
+    -webkit-text-decoration: none; /* For Safari */
+  }
+
+  .no-underline a {
+    text-decoration: none;
+    -webkit-text-decoration: none; /* For Safari */
+    color: inherit; /* Optional: This keeps the text color the same as the surrounding text */
+  }
 }
 
 @layer utilities {
