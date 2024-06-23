@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import ImageViewer from "@/components/img/ImgViewer";
 import { imgLink } from "@/utils/link";
 import Image from "next/image";
+import { dynamicBlurUrl } from "@/utils/dynamicBlurUrl";
 
+import { staticBlurUrl } from "@/utils/staticBlurUrl";
 const Gallery = () => {
   const [selectedIdx, setSelectedIdx] = useState(-1);
+  const [photos, setPhotos] = useState([]);
 
   const open = selectedIdx > -1;
   const handleSelectedImg = (idx: number) => {
@@ -13,17 +17,30 @@ const Gallery = () => {
   const handleClose = () => {
     setSelectedIdx(-1);
   };
+  useEffect(() => {
+    const fetchPhotos = async () => {
+      const photosArray = imgLink.map(async (photo) => ({
+        ...photo,
+        blurHash: await dynamicBlurUrl(photo.url),
+      }));
+
+      const photos = await Promise.all(photosArray);
+      setPhotos(photos);
+    };
+
+    fetchPhotos();
+  }, []);
 
   return (
-    <section className="py-[50px] px-[15px] bg-light-beige flex-col-default items-center shadow-sm">
+    <section className="py-[50px] px-[15px] bg-light-beige flex-col-default items-center shadow-sm ">
       <div className=" flex-col-default items-center">
         <p className="sub-title">GALLERY</p>
         <p>갤러리</p>
       </div>
 
       <div className="w-full">
-        <div className="grid grid-cols-3 gap-2 mt-4 mb-2">
-          {imgLink.map((img, id) => (
+        <div className="grid grid-cols-3 gap-2 mt-4 mb-2 min-h-[550px]">
+          {photos?.map((img: any, id: number) => (
             <div
               key={id}
               className="w-full h-0 relative"
@@ -34,9 +51,10 @@ const Gallery = () => {
                 alt={`Small ${id}`}
                 width={300}
                 height={300}
+                //sizes="(max-width:50px) 2vw, (max-width:415px)50vw, 75vw" //모바일까지 최적화 하기 위해
                 className="absolute inset-0 w-full h-full rounded-sm cursor-pointer object-cover"
                 placeholder="blur"
-                blurDataURL={img.url}
+                blurDataURL={img.blurHash || staticBlurUrl()}
                 onClick={() => handleSelectedImg(img.id)}
               />
             </div>
@@ -48,7 +66,7 @@ const Gallery = () => {
         open={open}
         onClose={handleClose}
         selectedIdx={selectedIdx}
-        images={imgLink}
+        images={photos}
       />
     </section>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import dayjs from "dayjs";
 import "dayjs/locale/ko";
@@ -8,6 +8,7 @@ import { useRecoilValue } from "recoil";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { IconKakao } from "@/components/assets/Kakao";
 import { Clipboard } from "@/components/assets/Clipboard";
+import Dialog from "@/components/dialog/Dialog";
 
 declare global {
   interface Window {
@@ -16,6 +17,8 @@ declare global {
 }
 
 const Share = () => {
+  const [isOpenCopyAlert, setIsOpenCopyAlert] = useState(false);
+
   const data = useRecoilValue(weddingDataState);
   useEffect(() => {
     const script = document.createElement("script");
@@ -62,6 +65,12 @@ const Share = () => {
       ],
     });
   };
+  const handleCopyAlert = () => {
+    setIsOpenCopyAlert(true);
+    setTimeout(() => {
+      setIsOpenCopyAlert(false);
+    }, 1500);
+  };
 
   return (
     <div className={"flex flex-col items-center text-sm py-10 gap-4"}>
@@ -70,15 +79,20 @@ const Share = () => {
         카카오톡 공유하기
       </button>
 
-      <CopyToClipboard
-        text={window.location.origin}
-        onCopy={() => alert("복사가 완료 되었습니다.")}
-      >
+      <CopyToClipboard text={window.location.origin} onCopy={handleCopyAlert}>
         <button className="flex gap-2">
           <Clipboard width={"20px"} />
           링크 복사하기
         </button>
       </CopyToClipboard>
+
+      {isOpenCopyAlert && (
+        <Dialog handleClosePopup={() => setIsOpenCopyAlert(false)}>
+          <div className="flex-col-default items-center">
+            <p>복사가 완료되었습니다.</p>
+          </div>
+        </Dialog>
+      )}
     </div>
   );
 };

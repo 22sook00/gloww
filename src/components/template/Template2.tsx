@@ -19,12 +19,12 @@ const Template2 = () => {
       </div>
       <div className="relative">
         <Image
-          src="/imgs/mainSample0.jpg"
+          src="/imgs/gallery/main.jpg"
           alt="sample1"
           width={330}
           height={100}
           placeholder="blur"
-          blurDataURL="/imgs/mainSample0.jpg"
+          blurDataURL="/imgs/gallery/main.jpg"
         />
         <Wave />
       </div>

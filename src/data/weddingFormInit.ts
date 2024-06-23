@@ -3,7 +3,7 @@ import { Wedding } from "@/interface/wedding";
 export const WEDDING_FORM_INIT: Wedding = {
   id: 0,
   design: {
-    mainImage: "/imgs/mainSample0.jpg",
+    mainImage: "/imgs/gallery/main.jpg",
     template: "1",
     font: "pretendard",
     color: "#F9F9F9",

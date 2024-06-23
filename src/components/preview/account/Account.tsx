@@ -18,7 +18,9 @@ const Account = () => {
   return (
     <section className="bg-light-beige py-[50px]  px-[15px] flex-col-default gap-3 items-center shadow-sm">
       <div className="flex flex-col justify-center items-center mb-4">
-        <p className="leading-7">마음 전하실 곳</p>
+        <p className="leading-7 font-medium text-default-text">
+          마음 전하실 곳
+        </p>
       </div>
 
       <Dropdown title={"신랑측"}>
@@ -37,7 +39,7 @@ const Account = () => {
       {isOpenCopyAlert && (
         <Dialog handleClosePopup={() => setIsOpenCopyAlert(false)}>
           <div className="flex-col-default items-center">
-            <p className="text-lg">복사가 완료되었습니다.</p>
+            <p>복사가 완료되었습니다.</p>
           </div>
         </Dialog>
       )}

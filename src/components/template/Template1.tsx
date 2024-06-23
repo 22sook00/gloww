@@ -1,35 +1,49 @@
-import React from "react";
+"use client";
+import React, { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import Wave from "../effect/Wave";
+import { dynamicBlurUrl } from "@/utils/dynamicBlurUrl";
+import { mainImgLink } from "@/src/utils/link";
 const Template1 = () => {
+  const [photo, setPhoto] = useState<any>([]);
+
+  useEffect(() => {
+    const fetchPhotos = async () => {
+      const photosArray = mainImgLink.map(async (photo) => ({
+        ...photo,
+        blurHash: await dynamicBlurUrl(photo.url),
+      }));
+
+      const photos = await Promise.all(photosArray);
+      setPhoto(photos);
+    };
+
+    fetchPhotos();
+  }, []);
+
   return (
     <section className="pb-[50px] ">
       <div className="relative min-h-[514px]">
-        {/*<div className="w-full max-h-[500px]  absolute left-0 mix-blend-screen	">
-          <video
-            id="intro-player"
-            autoPlay={true}
-            loop={true}
-            muted={true}
-            className="w-full max-h-[500px] opacity-100 visible 	"
-          >
-            <source src="/flower_00.mp4" />
-          </video>
-        </div>*/}
-        <Image
-          src="/imgs/mainSample0.jpg"
-          alt="sample1"
-          width={330}
-          height={100}
-          placeholder="blur"
-          priority={true}
-          blurDataURL="/imgs/mainSample0.jpg"
-          className="w-full "
-        />
-        <Wave />
+        {photo?.map((img: any, id: number) => {
+          return (
+            <Fragment key={`main-${id}`}>
+              <Image
+                src={img.url}
+                alt="main-1"
+                width={375}
+                height={525}
+                priority={true}
+                placeholder="blur"
+                blurDataURL={img.blurHash}
+                className="w-full "
+              />
+              <Wave />
+            </Fragment>
+          );
+        })}
       </div>
       <div className="flex-center flex-col gap-0">
-        <div className="flex-row gap-6 text-[21px] mt-10 mb-6 text-default-black font-medium tracking-[5px]">
+        <div className="flex-row gap-6 text-[21px] mt-10 mb-6 text-default-black font-medium tracking-[4px]">
           <p>허용준</p>
           <p>&</p>
           <p>이숙영</p>

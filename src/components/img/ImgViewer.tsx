@@ -4,6 +4,7 @@ import "./swiper.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import Image from "next/image";
 import Dialog from "../dialog/Dialog";
 import { Navigation, Pagination } from "swiper";
 
@@ -13,7 +14,7 @@ const ImageViewer = ({
   selectedIdx,
   onClose,
 }: {
-  images: { id: number; url: string }[];
+  images: { id: number; url: string; blurHash: any }[];
   open: boolean;
   selectedIdx: number;
   onClose: () => void;
@@ -35,9 +36,13 @@ const ImageViewer = ({
         {images.map((src, idx) => {
           return (
             <SwiperSlide key={idx}>
-              <img
+              <Image
                 src={src.url}
-                alt="img"
+                alt="thumbnail-img"
+                width={300}
+                height={300}
+                placeholder="blur"
+                blurDataURL={src.blurHash}
                 className="rounded object-contain h-full"
               />
             </SwiperSlide>

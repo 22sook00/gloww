@@ -3,7 +3,7 @@ import SoundIcon from "@/src/components/assets/SoundIcon";
 import SoundOffIcon from "@/src/components/assets/SoundOffIcon";
 
 const Sound = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Sound = () => {
 
   return (
     <div className="absolute top-4 right-4 z-50">
-      <audio ref={audioRef} loop={true} autoPlay={true}>
+      <audio ref={audioRef} loop={true} autoPlay={isPlaying}>
         <source src="/audio.mp3" />
       </audio>
       <button onClick={togglePlayPause} className=" text-[#777]">

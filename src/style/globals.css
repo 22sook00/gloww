@@ -57,7 +57,7 @@
     @apply my-10 border-dashed border-b-4;
   }
   .sub-title {
-    @apply tracking-[2px] text-[#795F47] font-amiri;
+    @apply tracking-[2px] text-default-text font-amiri;
   }
   .focus-ring {
     @apply focus:ring-offset-2 focus:ring-2 ring-default-beige;
@@ -109,6 +109,9 @@ body {
 .mantine-focus-auto {
   cursor: default !important;
   font-size: 13px !important;
+}
+.mantine-focus-auto[data-selected] {
+  background: #a96b6c !important;
 }
 .mantine-DatePicker {
   pointer-events: none;

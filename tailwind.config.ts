@@ -40,6 +40,7 @@ const config: Config = {
         "primary-through": "rgba(255, 217, 81, 0.3)",
         primary: "#2586F9",
         outline: "#dddddd",
+        "default-text": "#A96B6C",
         "light-outline": "#DBD9D8",
         "default-outline": "#D5D6D8",
         "dark-outline": "#B9B6B3",
@@ -55,7 +56,7 @@ const config: Config = {
 
         "light-yellow": "#fffdf4",
         "light-pink": "#fffafd",
-        "light-beige": "#F6F5F1",
+        "light-beige": "#f8f5f5",
         "default-beige": "#fbedc1",
 
         "text-dark": "#333333",

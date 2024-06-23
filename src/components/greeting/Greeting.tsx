@@ -13,8 +13,9 @@ const Greeting = () => {
       <article className="bg-white py-10 px-6">
         <h3 className="text-[20px] mb-6">결혼합니다</h3>
 
-        <p className="text-sm leading-[32px] text-dark-gray">
-          서로가 마주보며 다져온 사랑을 <br />
+        <p className="text-sm font-medium leading-[32px] text-dark-gray">
+          서로가 마주보며 다져온 <span className="text-[#a96b6c]">사랑</span>을{" "}
+          <br />
           이제 함께 한 곳을 바라보며 <br />
           걸어갈 수 있는 큰 사랑으로 <br />
           키우고자 합니다.

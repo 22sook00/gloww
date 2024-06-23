@@ -15,7 +15,7 @@ const Dropdown = ({ title, children }: DropdownProps) => {
   };
 
   return (
-    <div className="relative w-full text-left border rounded-md">
+    <div className="relative w-full text-left shadow-xs rounded-md">
       <button
         type="button"
         className={`flex w-full justify-between rounded-md

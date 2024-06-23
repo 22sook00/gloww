@@ -8,12 +8,12 @@ const Template3 = () => {
         <div className="h-[250px] overflow-hidden ">
           <div className="my-2 ml-2 flex h-[234px] ">
             <Image
-              src="/imgs/mainSample0.jpg"
+              src="/imgs/gallery/main.jpg"
               alt="sample1"
               width={350}
               height={100}
               placeholder="blur"
-              blurDataURL="/imgs/mainSample0.jpg"
+              blurDataURL="/imgs/gallery/main.jpg"
               className=" object-cover object-top"
             />
           </div>

@@ -70,7 +70,7 @@ export interface Account {
   relationship: string;
   bankName: string;
   accountNumber: string;
-  kakaopayLink: string;
+  kakaopayLink?: string;
   isSame?: boolean;
   holder: string;
 }
