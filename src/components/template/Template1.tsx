@@ -43,7 +43,7 @@ const Template1 = () => {
         })}
       </div>
       <div className="flex-center flex-col gap-0">
-        <div className="flex-row gap-6 text-[21px] mt-10 mb-6 text-default-black font-medium tracking-[4px]">
+        <div className="flex-row gap-6 text-[21px] mt-10 mb-6 text-dark-black font-medium tracking-[4px]">
           <p>허용준</p>
           <p>&</p>
           <p>이숙영</p>

@@ -11,7 +11,7 @@ const Greeting = () => {
   return (
     <section className="bg-light-beige p-5 shadow-sm">
       <article className="bg-white py-10 px-6">
-        <h3 className="text-[20px] mb-6">결혼합니다</h3>
+        <h3 className="text-[20px] mb-6 text-[#89757a]">결혼합니다</h3>
 
         <p className="text-sm font-medium leading-[32px] text-dark-gray">
           서로가 마주보며 다져온 <span className="text-[#a96b6c]">사랑</span>을{" "}
@@ -24,16 +24,19 @@ const Greeting = () => {
           <br />
           지켜나갈 수 있도록
           <br />
-          앞날을 축복해 주시면 감사하겠습니다.
+          앞날을 <span className="text-[#a96b6c]">축복</span>해 주시면
+          감사하겠습니다.
         </p>
 
         <div className="my-8  border-[0.5px] border-light-outline" />
-        <div className=" text-sm text-default-black flex-row justify-around gap-2 mb-2">
-          <h5 className="">
-            {groom.parents[0]?.name}﹒{groom.parents[1]?.name}
-          </h5>
-          <span className="text-default-gray">의 장남</span>
-          <h5 className=" font-medium">용준</h5>
+        <div className=" text-sm text-default-black flex-row justify-around  mb-2">
+          <div className="flex-row items-center gap-2 ">
+            <span>
+              {groom.parents[0]?.name} · {groom.parents[1]?.name}
+            </span>
+            <span className="text-default-gray text-xs">의 장남</span>
+            <h5 className=" font-medium">용준</h5>
+          </div>
           <div className="flex gap-2">
             <Dot />
             <Dot />
@@ -43,12 +46,14 @@ const Greeting = () => {
             <CallIcon />
           </a>
         </div>
-        <div className="text-sm text-default-black flex-row justify-around gap-2">
-          <h5 className="">
-            {bride.parents[0]?.name}﹒{bride.parents[1]?.name}
-          </h5>
-          <span className="text-default-gray"> 의 장녀 </span>
-          <h5 className=" font-medium">숙영</h5>
+        <div className="text-sm text-default-black flex-row justify-around ">
+          <div className="flex-row items-center gap-2 ">
+            <h5 className="">
+              {bride.parents[0]?.name} · {bride.parents[1]?.name}
+            </h5>
+            <span className="text-default-gray text-xs"> 의 장녀 </span>
+            <h5 className=" font-medium">숙영</h5>
+          </div>
           <div className="flex gap-2">
             <Dot />
             <Dot />

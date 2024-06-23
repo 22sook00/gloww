@@ -24,7 +24,9 @@ const AccountContent = ({
               <div>
                 <p>
                   <span>{list.bankName}</span> |{" "}
-                  <span className="no-underline">{list.accountNumber}</span>
+                  <span className="no-underline">
+                    {list.accountNumber.split("-").join("-")}
+                  </span>
                 </p>
                 <p className="text-default-gray">
                   예금주 : {list?.holder || "허용준"}
