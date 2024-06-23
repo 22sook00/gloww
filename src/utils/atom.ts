@@ -90,7 +90,6 @@ export const weddingDataState = atom({
           relationship: "mother",
           bankName: "우리은행",
           accountNumber: "078-045475-02-201",
-          //kakaopayLink: "https://link.kakaopay.com/_/R_EKw_5",
         },
       ],
       bride: [
@@ -102,13 +101,18 @@ export const weddingDataState = atom({
           accountNumber: "3333-10-5404029",
           kakaopayLink: "https://link.kakaopay.com/_/R_EKw_5",
         },
-        //{
-        //  holder: "박예경",
-        //  relationship: "mother",
-        //  bankName: "케이뱅크",
-        //  accountNumber: "25562-032-123433",
-        //  kakaopayLink: "https://link.kakaopay.com/_/R_EKw_5",
-        //},
+        {
+          holder: "이유묵",
+          relationship: "father",
+          bankName: "NH 농협은행",
+          accountNumber: "193-02-193356",
+        },
+        {
+          holder: "박예경",
+          relationship: "mother",
+          bankName: "NH 농협은행",
+          accountNumber: "241094-52-074040",
+        },
       ],
     },
     greeting: {

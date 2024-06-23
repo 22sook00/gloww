@@ -80,8 +80,8 @@ const Share = () => {
       </button>
 
       <CopyToClipboard text={window.location.origin} onCopy={handleCopyAlert}>
-        <button className="flex gap-2">
-          <Clipboard width={"20px"} />
+        <button className="flex items-center gap-2">
+          <Clipboard width={"16px"} />
           링크 복사하기
         </button>
       </CopyToClipboard>

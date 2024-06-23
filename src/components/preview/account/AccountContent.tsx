@@ -25,7 +25,7 @@ const AccountContent = ({
                 <p>
                   <span>{list.bankName}</span> |{" "}
                   <span className="no-underline">
-                    {list.accountNumber.split("-").join("-")}
+                    {list.accountNumber.split("").join("\u200B")}
                   </span>
                 </p>
                 <p className="text-default-gray">
