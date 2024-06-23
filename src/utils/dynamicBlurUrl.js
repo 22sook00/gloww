@@ -1,7 +1,7 @@
 const baseUrl =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "http://localhost:3000";
+    : "https://gloww.vercel.app/";
 
 export const dynamicBlurUrl = async (url) => {
   const base64str = await fetch(`${baseUrl}/_next/image?url=${url}&w=16&q=60`, {
