@@ -4,9 +4,12 @@ const baseUrl =
     : "https://gloww.vercel.app/";
 
 export const dynamicBlurUrl = async (url) => {
-  const base64str = await fetch(`${baseUrl}/_next/image?url=${url}&w=16&q=60`, {
-    cache: "no-cache",
-  }).then(async (res) =>
+  const base64str = await fetch(
+    `${baseUrl}/_next/image?url=${url}&w=16&q=100`,
+    {
+      cache: "no-cache",
+    }
+  ).then(async (res) =>
     Buffer.from(await res.arrayBuffer()).toString("base64")
   );
 

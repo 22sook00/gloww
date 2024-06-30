@@ -46,11 +46,11 @@ const MobileComplete = () => {
   return (
     <div className={`text-default-black flex-center relative font-myungjo`}>
       <div
-        className={`w-full max-w-[406px] flex flex-col
+        className={`w-full max-w-[450px] flex flex-col
         overflow-scroll lg:rounded-[24px] shadow-md `}
       >
         <div className="relative shadow-sm">
-          <Sound />
+          {/*<Sound />*/}
           <Template1 />
         </div>
 

@@ -42,14 +42,14 @@ const Dialog = ({
   if (ref.current && mounted) {
     return ReactDOM.createPortal(
       <div
-        className={`flex-col-default gap-0 items-center fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 text-black overflow-y-scroll z-50 animate-show-modal-bg`}
+        className={`flex-col-default gap-0 items-center fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 text-black overflow-y-scroll z-50 animate-show-modal-bg`}
       >
         <div
           onClick={handleClosePopup}
           className="absolute top-0 left-0 w-full h-full overflow-hidden"
         />
         {!isBackground && (
-          <div onClick={handleClosePopup} className="cursor-pointer">
+          <div onClick={handleClosePopup} className="cursor-pointer fills   ">
             <Close
               className={
                 "w-4 h-4 text-white absolute top-2.5 right-4 z-10 cursor-pointer"
@@ -73,7 +73,7 @@ const Dialog = ({
               </div>
               <div onClick={handleClosePopup} className="cursor-pointer">
                 <CloseCircle
-                  className={"absolute top-5 right-5 z-10 cursor-pointer"}
+                  className={"absolute top-5 right-5 z-10 cursor-pointer "}
                 />
               </div>
             </header>

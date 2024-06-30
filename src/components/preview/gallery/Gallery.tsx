@@ -50,8 +50,9 @@ const Gallery = () => {
                 src={img.url}
                 alt={`Small ${id}`}
                 width={300}
-                height={300}
-                //sizes="(max-width:50px) 2vw, (max-width:415px)50vw, 75vw" //모바일까지 최적화 하기 위해
+                height={450}
+                quality={100}
+                sizes="(max-width:50px) 2vw, (max-width:415px)50vw, 75vw" //모바일까지 최적화 하기 위해
                 className="absolute inset-0 w-full h-full rounded-sm cursor-pointer object-cover"
                 placeholder="blur"
                 blurDataURL={img.blurHash || staticBlurUrl()}

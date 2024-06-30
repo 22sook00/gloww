@@ -31,6 +31,7 @@ const ImageViewer = ({
         loop={true}
         initialSlide={selectedIdx}
         navigation
+
         //pagination={{ clickable: true }}
       >
         {images.map((src, idx) => {
@@ -40,11 +41,18 @@ const ImageViewer = ({
                 src={src.url}
                 alt="thumbnail-img"
                 width={300}
-                height={300}
+                height={450}
+                quality={100}
                 placeholder="blur"
                 blurDataURL={src.blurHash}
+                //sizes={"100%"}
                 className="rounded object-contain h-full"
               />
+              {/*<img
+                src={src.url}
+                alt="thumbnail-img"
+                className="object-contain h-full"
+              />*/}
             </SwiperSlide>
           );
         })}

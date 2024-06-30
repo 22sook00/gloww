@@ -40,8 +40,8 @@ const Share = () => {
     window.Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: `${data.groom.name}💓${data.bride.name} 결혼합니다.`,
-        description: `
+        title: `${data.groom.name}&${data.bride.name} 결혼합니다.`,
+        description: `상암 월드컵컨벤션 
         ${
           (dayjs(weddingDate),
           dayjs(weddingDate).format("M월 D일 dddd h시 m분"))

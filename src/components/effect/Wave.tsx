@@ -1,8 +1,8 @@
 import React from "react";
 
-const Wave = () => {
+const Wave = ({ isTop = false }) => {
   return (
-    <div className="w-full absolute bottom-0">
+    <div className={`w-full absolute bottom-0`}>
       <svg
         className="relative w-full h-[60px]"
         viewBox="0 24 150 28"
