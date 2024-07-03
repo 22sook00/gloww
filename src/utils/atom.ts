@@ -86,6 +86,12 @@ export const weddingDataState = atom({
           kakaopayLink: "https://link.kakaopay.com/_/R_EKw_5",
         },
         {
+          holder: "허철근",
+          relationship: "father",
+          bankName: "새마을금고",
+          accountNumber: "9003-2875-6557-2",
+        },
+        {
           holder: "강혜자",
           relationship: "mother",
           bankName: "우리은행",
