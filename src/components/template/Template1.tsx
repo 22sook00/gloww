@@ -72,7 +72,7 @@ const Template1 = () => {
         </div>
         <div className="flex-center flex-col gap-1 text-light-black text-sm leading-6">
           <p>2024. 09. 07. 토요일 12시 20분</p>
-          <p>상암 월드컵컨벤션 임페리얼홀</p>
+          <p>상암 월드컵컨벤션 임페리얼볼룸</p>
         </div>
       </div>
       <div

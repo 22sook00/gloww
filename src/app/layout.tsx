@@ -95,7 +95,8 @@ export default function RootLayout({
         <meta property="og:site_name" content={siteMetadata.title} />
         <meta
           property="og:image"
-          content="https://gloww-thumbnail.s3.ap-northeast-2.amazonaws.com/IMG_1971.JPG"
+          //content="https://gloww-thumbnail.s3.ap-northeast-2.amazonaws.com/IMG_1971.JPG"
+          content="/imgs/gallery/sepia2.jpg"
         />
         <meta property="og:image:alt" content="thumbnail" />
         <meta property="og:locale" content="ko_KR" />
