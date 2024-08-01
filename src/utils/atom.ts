@@ -83,7 +83,7 @@ export const weddingDataState = atom({
           isSame: true,
           bankName: "카카오뱅크",
           accountNumber: "3333-13-1890279",
-          kakaopayLink: "https://link.kakaopay.com/_/R_EKw_5",
+          kakaopayLink: "https://qr.kakaopay.com/FPfdj1H2r",
         },
         {
           holder: "허철근",

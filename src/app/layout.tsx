@@ -96,7 +96,7 @@ export default function RootLayout({
         <meta
           property="og:image"
           //content="https://gloww-thumbnail.s3.ap-northeast-2.amazonaws.com/IMG_1971.JPG"
-          content="/imgs/gallery/sepia2.jpg"
+          content="https://wedding-thumbnail.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-07-31-22-50-45.jpeg"
         />
         <meta property="og:image:alt" content="thumbnail" />
         <meta property="og:locale" content="ko_KR" />
