@@ -9,7 +9,7 @@ interface DropdownProps {
 }
 
 const Dropdown = ({ title, children }: DropdownProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const handleOpenClick = () => {
     setIsOpen((prev) => !prev);
   };
