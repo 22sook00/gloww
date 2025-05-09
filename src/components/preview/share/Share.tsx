@@ -46,7 +46,7 @@ const Share = () => {
           dayjs(weddingDate).format("M월 D일 dddd h시 m분"))
         }`,
         imageUrl:
-          "https://wedding-thumbnail.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-07-31-22-50-45.jpeg",
+          "https://glow-wedding-card.s3.us-east-2.amazonaws.com/main.jpeg",
 
         link: {
           mobileWebUrl: window.location.origin,
