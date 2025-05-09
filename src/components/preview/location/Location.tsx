@@ -44,6 +44,7 @@ const Location = () => {
           </Link>
           <Link
             href={locationLink.kakao}
+            target={"_blank"}
             className="shadow 
           border-1 
           border-tint-gray
@@ -59,6 +60,7 @@ const Location = () => {
           </Link>
           <Link
             href={locationLink.t}
+            target={"_blank"}
             className="shadow 
           border-1 
           border-tint-gray

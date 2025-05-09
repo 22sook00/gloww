@@ -26,7 +26,7 @@ const Dropdown = ({ title, children }: DropdownProps) => {
         aria-haspopup="true"
         onClick={handleOpenClick}
       >
-        <p className="leading-[18px]  text-sm text-gray-900">{title}</p>
+        <p className=" text-sm text-gray-900">{title}</p>
         {isOpen ? <ArrowUp /> : <ArrowDown />}
       </button>
 
