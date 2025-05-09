@@ -19,7 +19,7 @@ const Greeting = () => {
           <br />
           지켜나갈 수 있도록
           <br />
-          앞날을 축복해 주시면 감사하겠습니다.
+          앞날을 축복해 주시면 감사하겠습니다. <br />
         </p>
         <div className="my-8 border border-light-outline" />
         <div className=" text-default-black flex-row justify-around gap-2 mb-2">

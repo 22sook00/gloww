@@ -1,25 +1,21 @@
 export const locationLink = {
-  naver: "https://naver.me/GCaL6wT1",
+  naver: "https://map.naver.com/p/entry/place/1152589746?c=11.00,0,0,0,dh",
   kakao:
-    "https://map.kakao.com/?urlX=477178.0&urlY=1130342.0&name=%EC%83%81%EC%95%94%EC%9B%94%EB%93%9C%EC%BB%B5%EC%BB%A8%EB%B2%A4%EC%85%98%EC%9B%A8%EB%94%A9%ED%99%80",
-  t: "https://www.tmap.co.kr/tmap2/mobile/route.jsp?appKey=l7xx595be988bd964e3c855dce4935a84747&lat=37.568724&lon=126.8966651&name=%EC%83%81%EC%95%94%EC%9B%94%EB%93%9C%EC%BB%B5%EC%BB%A8%EB%B2%A4%EC%85%98%EC%9B%A8%EB%94%A9%ED%99%80",
+    "https://map.kakao.com/?urlX=500107.0&urlY=1131934.0&name=%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%8C%80%ED%95%99%EB%A1%9C3%EA%B8%B8%2029&map_type=TYPE_MAP&from=roughmap",
+  t: "tmap://search?name=백주년 기념관 웨딩홀",
 };
 
-export const mainImgLink = [{ id: 0, url: "/imgs/gallery/grayscale3.jpg" }];
+export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/008.jpeg" }];
 export const imgLink = [
-  { id: 0, url: "/imgs/gallery/bright1.jpg" },
-  { id: 1, url: "/imgs/gallery/bright2.jpg" },
-  { id: 2, url: "/imgs/gallery/bright3.jpg" },
-  { id: 3, url: "/imgs/gallery/grayscale1.jpg" },
-  { id: 4, url: "/imgs/gallery/grayscale2.jpg" },
-  { id: 5, url: "/imgs/gallery/pink2.jpg" },
-  { id: 6, url: "/imgs/gallery/yong1.jpg" },
-  { id: 7, url: "/imgs/gallery/white1.jpg" },
-  { id: 8, url: "/imgs/gallery/pink6.jpg" },
-  { id: 9, url: "/imgs/gallery/sook2.jpg" },
-  { id: 10, url: "/imgs/gallery/pink3.jpg" },
-  { id: 11, url: "/imgs/gallery/grayscale4.jpg" },
-  { id: 12, url: "/imgs/gallery/sepia1.jpg" },
-  { id: 13, url: "/imgs/gallery/sepia2.jpg" },
-  { id: 14, url: "/imgs/gallery/sepia3.jpg" },
+  { id: 0, url: "/imgs/wonharaGallery/001.jpeg" },
+  { id: 1, url: "/imgs/wonharaGallery/002.jpeg" },
+  { id: 2, url: "/imgs/wonharaGallery/003.jpeg" },
+  { id: 3, url: "/imgs/wonharaGallery/004.jpeg" },
+  { id: 4, url: "/imgs/wonharaGallery/005.jpeg" },
+  { id: 5, url: "/imgs/wonharaGallery/006.jpeg" },
+  { id: 6, url: "/imgs/wonharaGallery/007.jpeg" },
+  { id: 7, url: "/imgs/wonharaGallery/008.jpeg" },
+  { id: 8, url: "/imgs/wonharaGallery/009.jpeg" },
+  { id: 9, url: "/imgs/wonharaGallery/010.jpeg" },
+  { id: 10, url: "/imgs/wonharaGallery/011.jpeg" },
 ];

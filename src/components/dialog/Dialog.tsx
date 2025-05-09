@@ -58,7 +58,7 @@ const Dialog = ({
           </div>
         )}
         <div
-          className={`relative flex-col flex w-[90%] min-w-[300px] max-w-[370px] min-h-[150px] max-h-[80%]  p-0
+          className={`relative flex-col flex w-[90%] min-w-[300px] max-w-[350px] min-h-[150px] max-h-[80%]  p-0
         ${isBackground ? "bg-white" : " bg-transparent"}
          animate-show-modal-box rounded shadow-lg`}
         >

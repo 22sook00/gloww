@@ -40,19 +40,13 @@ const ImageViewer = ({
               <Image
                 src={src.url}
                 alt="thumbnail-img"
-                width={300}
+                width={400}
                 height={450}
                 quality={100}
                 placeholder="blur"
                 blurDataURL={src.blurHash}
-                //sizes={"100%"}
                 className="rounded object-contain h-full"
               />
-              {/*<img
-                src={src.url}
-                alt="thumbnail-img"
-                className="object-contain h-full"
-              />*/}
             </SwiperSlide>
           );
         })}

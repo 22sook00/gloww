@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { DatePicker } from "@mantine/dates";
 import { useRecoilValue } from "recoil";
@@ -23,9 +23,9 @@ const Date = () => {
           firstDayOfWeek={0}
           size="md"
           locale="ko"
-          defaultDate={new window.Date(2024, 8, 7)}
-          defaultValue={new window.Date(2024, 8, 7)}
-          value={new window.Date(2024, 8, 7)}
+          defaultDate={new window.Date(2025, 5, 14)}
+          defaultValue={new window.Date(2025, 5, 14)}
+          value={new window.Date(2025, 5, 14)}
         />
       </div>
     </section>

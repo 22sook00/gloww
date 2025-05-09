@@ -4,8 +4,14 @@ import Image from "next/image";
 import Wave from "../effect/Wave";
 import { dynamicBlurUrl } from "@/utils/dynamicBlurUrl";
 import { mainImgLink } from "@/src/utils/link";
+import { weddingDataState } from "@/src/utils/atom";
+import { useRecoilValue } from "recoil";
+import { formatDate } from "@/src/utils/format";
 const Template1 = () => {
+  const { groom, bride, location, date } = useRecoilValue(weddingDataState);
   const [photo, setPhoto] = useState<any>([]);
+
+  const { datePart, timePart } = formatDate(date.date);
 
   useEffect(() => {
     const fetchPhotos = async () => {
@@ -24,18 +30,6 @@ const Template1 = () => {
   return (
     <section className="pb-[50px] relative">
       <div className="relative min-h-[525px] gradient">
-        {/*<div className="absolute top-10 left-[22%] flex-center flex-col gap-0">
-          <div className="flex-row gap-6 text-[21px] mt-10 mb-6 text-dark-black font-bold tracking-[4px]">
-            <p>허용준</p>
-            <p>&</p>
-            <p>이숙영</p>
-          </div>
-          <div className="flex-center flex-col gap-1 text-light-black text-sm leading-6">
-            <p>2024. 09. 07. 토요일 12시 20분</p>
-            <p>상암 월드컵컨벤션 임페리얼홀</p>
-          </div>
-        </div>*/}
-
         {photo?.map((img: any, id: number) => {
           return (
             <Fragment key={`main-${id}`}>
@@ -53,11 +47,6 @@ const Template1 = () => {
                   objectFit: "cover", // cover, contain, none
                 }}
               />
-              {/*<img
-                src={"/imgs/gallery/grayscale3.jpg"}
-                alt="main-1"
-                className="w-screen object-contain absolute top-[-5px]"
-              />*/}
               <Wave />
             </Fragment>
           );
@@ -66,13 +55,17 @@ const Template1 = () => {
 
       <div className="flex-center flex-col gap-0">
         <div className="flex-row gap-6 text-[21px] mt-10 mb-6 text-dark-black font-medium tracking-[4px]">
-          <p>허용준</p>
+          <p>{groom.name}</p>
           <p>&</p>
-          <p>이숙영</p>
+          <p>{bride.name}</p>
         </div>
         <div className="flex-center flex-col gap-1 text-light-black text-sm leading-6">
-          <p>2024. 09. 07. 토요일 12시 20분</p>
-          <p>상암 월드컵컨벤션 임페리얼볼룸</p>
+          <p>
+            {datePart} {timePart}
+          </p>
+          <p>
+            {location.name} {location.detail}
+          </p>
         </div>
       </div>
       <div

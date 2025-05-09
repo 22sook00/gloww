@@ -20,10 +20,12 @@ const Location = () => {
           <p className="leading-7">
             {location.name} {location.detail}
           </p>
-          <p className="text-sm mt-1 text-light-black">{location.address}</p>
+          <p className="text-sm mt-1 text-light-black text-center whitespace-pre-wrap leading-6">
+            {location.address}
+          </p>
         </div>
         <Map location={location} />
-        <div className="grid grid-cols-3 gap-2 font-pretendard text-sm mb-7">
+        <div className="grid sm:grid-cols-2 grid-cols-3 gap-2 justify-center font-pretendard text-sm mb-7">
           <Link
             href={locationLink.naver}
             target={"_blank"}
@@ -44,6 +46,7 @@ const Location = () => {
           </Link>
           <Link
             href={locationLink.kakao}
+            target={"_blank"}
             className="shadow 
           border-1 
           border-tint-gray
@@ -59,10 +62,11 @@ const Location = () => {
           </Link>
           <Link
             href={locationLink.t}
+            target={"_blank"}
             className="shadow 
           border-1 
           border-tint-gray
-          flex gap-1 bg-white py-2 px-3 justify-center rounded"
+          flex gap-1 bg-white py-2 px-3 justify-center rounded sm:hidden"
           >
             <Image src="/imgs/tmap.png" alt="t-map" width={20} height={20} />
             <span>티맵</span>

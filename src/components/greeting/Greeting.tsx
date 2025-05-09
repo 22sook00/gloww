@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import CallIcon from "@/components/assets/Call";
 import { useRecoilValue } from "recoil";
@@ -14,28 +14,29 @@ const Greeting = () => {
         <h3 className="text-[20px] mb-6 text-[#89757a]">결혼합니다</h3>
 
         <p className="text-sm font-medium leading-[32px] text-dark-gray">
-          서로가 마주보며 다져온 <span className="text-[#a96b6c]">사랑</span>을{" "}
+          하나님 안에서 키워온 10년의
+          <span className="text-[#a96b6c]"> 사랑</span>, <br />
+          이제는 <span className="font-semibold">하나님께서 주신 마음</span>으로
+          결단하여 <br />
+          하나의 가정을 이루고자 합니다.
           <br />
-          이제 함께 한 곳을 바라보며 <br />
-          걸어갈 수 있는 큰 사랑으로 <br />
-          키우고자 합니다.
+          <br />늘 하나님만 의지하며
+          <br /> 세상의 빛과 소금이 되어 살아가겠습니다.
           <br />
-          저희 두 사람이 사랑의 이름으로
           <br />
-          지켜나갈 수 있도록
-          <br />
-          앞날을 <span className="text-[#a96b6c]">축복</span>해 주시면
-          감사하겠습니다.
+          저희의 결혼예배 자리에 함께하시어 <br />
+          축복으로 자리를 빛내주시길 바랍니다.
         </p>
 
         <div className="my-8  border-[0.5px] border-light-outline" />
         <div className=" text-sm text-default-black flex-row justify-around  mb-2">
-          <div className="flex-row items-center gap-2 ">
+          <div className="flex-row items-center gap-2 w-[190px]">
             <span>
+              {groom.parents[0]?.isDead && "故"}
               {groom.parents[0]?.name} · {groom.parents[1]?.name}
             </span>
             <span className="text-default-gray text-xs">의 장남</span>
-            <h5 className=" font-medium">용준</h5>
+            <h5 className="font-medium">{groom.name.slice(1)}</h5>
           </div>
           <div className="flex gap-2">
             <Dot />
@@ -47,12 +48,13 @@ const Greeting = () => {
           </a>
         </div>
         <div className="text-sm text-default-black flex-row justify-around ">
-          <div className="flex-row items-center gap-2 ">
+          <div className="flex-row items-center gap-2 w-[190px]">
             <h5 className="">
+              {bride.parents[0]?.isDead && "故"}
               {bride.parents[0]?.name} · {bride.parents[1]?.name}
             </h5>
             <span className="text-default-gray text-xs"> 의 장녀 </span>
-            <h5 className=" font-medium">숙영</h5>
+            <h5 className=" font-medium">{bride.name.slice(1)}</h5>
           </div>
           <div className="flex gap-2">
             <Dot />
