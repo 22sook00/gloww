@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     siteName: siteMetadata.title,
     images: [
       {
-        url: "imgs/mainSample8.jpg",
+        url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/main.jpeg",
         alt: "thumbnail",
       },
     ],
@@ -85,23 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <title>{siteMetadata.title}</title>
-        <meta name="description" content={siteMetadata.description} />
-        <meta property="og:title" content={siteMetadata.title} />
-        <meta property="og:description" content={siteMetadata.description} />
-        <meta property="og:url" content={siteMetadata.siteUrl} />
-        <meta property="og:site_name" content={siteMetadata.title} />
-        <meta
-          property="og:image"
-          //content="https://gloww-thumbnail.s3.ap-northeast-2.amazonaws.com/IMG_1971.JPG"
-          content="https://glow-wedding-card.s3.us-east-2.amazonaws.com/main.jpeg"
-        />
-        <meta property="og:image:alt" content="thumbnail" />
-        <meta property="og:locale" content="ko_KR" />
-        <meta property="og:type" content="website" />
-      </head>
+    <html lang="ko">
       <body
         className={`
       ${pretendard.variable}

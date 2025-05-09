@@ -39,7 +39,7 @@ const Gallery = () => {
       </div>
 
       <div className="w-full">
-        <div className="grid grid-cols-3 gap-2 mt-4 mb-2 min-h-[550px]">
+        <div className="grid grid-cols-3 gap-2 mt-4 mb-2 min-h-[450px]">
           {photos?.map((img: any, id: number) => (
             <div
               key={id}

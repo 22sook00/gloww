@@ -36,7 +36,7 @@ const Greeting = () => {
               {groom.parents[0]?.name} · {groom.parents[1]?.name}
             </span>
             <span className="text-default-gray text-xs">의 장남</span>
-            <h5 className=" font-medium">용준</h5>
+            <h5 className=" font-medium">{groom.name.slice(1)}</h5>
           </div>
           <div className="flex gap-2">
             <Dot />
@@ -54,7 +54,7 @@ const Greeting = () => {
               {bride.parents[0]?.name} · {bride.parents[1]?.name}
             </h5>
             <span className="text-default-gray text-xs"> 의 장녀 </span>
-            <h5 className=" font-medium">숙영</h5>
+            <h5 className=" font-medium">{bride.name.slice(1)}</h5>
           </div>
           <div className="flex gap-2">
             <Dot />
