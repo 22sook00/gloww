@@ -31,7 +31,7 @@ const Dropdown = ({ title, children }: DropdownProps) => {
       </button>
 
       <div
-        className={`overflow-hidden transition-max-height duration-700 ease-in-out ${
+        className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}
         role="menu"

@@ -5,17 +5,17 @@ export const locationLink = {
   t: "tmap://search?name=백주년 기념관 웨딩홀",
 };
 
-export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/001.jpeg" }];
+export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/0001.jpeg" }];
 export const imgLink = [
-  { id: 0, url: "/imgs/wonharaGallery/001.jpeg" },
-  { id: 1, url: "/imgs/wonharaGallery/002.jpeg" },
-  { id: 2, url: "/imgs/wonharaGallery/003.jpeg" },
-  { id: 3, url: "/imgs/wonharaGallery/004.jpeg" },
-  { id: 4, url: "/imgs/wonharaGallery/005.jpeg" },
-  { id: 5, url: "/imgs/wonharaGallery/006.jpeg" },
-  { id: 6, url: "/imgs/wonharaGallery/007.jpeg" },
-  { id: 7, url: "/imgs/wonharaGallery/008.jpeg" },
-  { id: 8, url: "/imgs/wonharaGallery/009.jpeg" },
-  { id: 9, url: "/imgs/wonharaGallery/010.jpeg" },
-  { id: 10, url: "/imgs/wonharaGallery/011.jpeg" },
+  { id: 0, url: "/imgs/wonharaGallery/0001.jpeg" },
+  { id: 1, url: "/imgs/wonharaGallery/0002.jpeg" },
+  { id: 2, url: "/imgs/wonharaGallery/0003.jpeg" },
+  { id: 3, url: "/imgs/wonharaGallery/0004.jpeg" },
+  { id: 4, url: "/imgs/wonharaGallery/0005.jpeg" },
+  { id: 5, url: "/imgs/wonharaGallery/0006.jpeg" },
+  { id: 6, url: "/imgs/wonharaGallery/0007.jpeg" },
+  { id: 7, url: "/imgs/wonharaGallery/0008.jpeg" },
+  { id: 8, url: "/imgs/wonharaGallery/0009.jpeg" },
+  { id: 9, url: "/imgs/wonharaGallery/0010.jpeg" },
+  { id: 10, url: "/imgs/wonharaGallery/0011.jpeg" },
 ];
