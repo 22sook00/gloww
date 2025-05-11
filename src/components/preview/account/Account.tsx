@@ -36,6 +36,12 @@ const Account = () => {
         />
       </Dropdown>
 
+      <p className="flex flex-col justify-center items-center text-center text-[13px] mt-10 leading-6  text-default-text">
+        축하 화환은 정중히 사양합니다.
+        <br />
+        축하해주시는 마음만 감사히 받겠습니다.
+      </p>
+
       {isOpenCopyAlert && (
         <Dialog handleClosePopup={() => setIsOpenCopyAlert(false)}>
           <div className="flex-col-default items-center">

@@ -70,9 +70,7 @@ const Template1 = () => {
       </div>
       <div
         className="absolute top-4 left-4 
-        line
-      
-      border border-[2px solid rgb(239, 239, 239)]"
+        line border border-[2px solid rgb(239, 239, 239)]"
       />
     </section>
   );

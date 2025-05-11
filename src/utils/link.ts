@@ -5,7 +5,7 @@ export const locationLink = {
   t: "tmap://search?name=백주년 기념관 웨딩홀",
 };
 
-export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/008.jpeg" }];
+export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/001.jpeg" }];
 export const imgLink = [
   { id: 0, url: "/imgs/wonharaGallery/001.jpeg" },
   { id: 1, url: "/imgs/wonharaGallery/002.jpeg" },

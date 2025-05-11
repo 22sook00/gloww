@@ -57,7 +57,7 @@ export const weddingDataState = atom({
     },
     bride: {
       name: "원하라",
-      phoneNumber: "01050352068",
+      phoneNumber: "01066232448",
       parents: [
         {
           name: "원경호",

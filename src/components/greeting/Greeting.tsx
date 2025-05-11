@@ -16,8 +16,7 @@ const Greeting = () => {
         <p className="text-sm font-medium leading-[32px] text-dark-gray">
           하나님 안에서 키워온 10년의
           <span className="text-[#a96b6c]"> 사랑</span>, <br />
-          이제는 <span className="font-semibold">하나님께서 주신 마음</span>으로
-          결단하여 <br />
+          이제는 하나님께서 주신 마음으로 결단하여 <br />
           하나의 가정을 이루고자 합니다.
           <br />
           <br />늘 하나님만 의지하며
@@ -25,7 +24,7 @@ const Greeting = () => {
           <br />
           <br />
           저희의 결혼예배 자리에 함께하시어 <br />
-          축복으로 자리를 빛내주시길 바랍니다.
+          축복으로 자리를 빛내주시면 감사하겠습니다.
         </p>
 
         <div className="my-8  border-[0.5px] border-light-outline" />
@@ -49,10 +48,10 @@ const Greeting = () => {
         </div>
         <div className="text-sm text-default-black flex-row justify-around ">
           <div className="flex-row items-center gap-2  w-[190px] ">
-            <h5 className="">
+            <span>
               {bride.parents[0]?.isDead && "故"}
               {bride.parents[0]?.name} · {bride.parents[1]?.name}
-            </h5>
+            </span>
             <span className="text-default-gray text-xs"> 의 장녀 </span>
             <h5 className=" font-medium">{bride.name.slice(1)}</h5>
           </div>

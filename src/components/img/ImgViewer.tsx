@@ -22,6 +22,7 @@ const ImageViewer = ({
   if (!open) {
     return null;
   }
+
   return (
     <Dialog handleClosePopup={onClose} isBackground={false}>
       <Swiper
