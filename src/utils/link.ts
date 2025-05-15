@@ -5,17 +5,78 @@ export const locationLink = {
   t: "tmap://search?name=백주년 기념관 웨딩홀",
 };
 
-export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/0001.jpeg" }];
+export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/000.jpeg" }];
 export const imgLink = [
-  { id: 0, url: "/imgs/wonharaGallery/0001.jpeg" },
-  { id: 1, url: "/imgs/wonharaGallery/0002.jpeg" },
-  { id: 2, url: "/imgs/wonharaGallery/0003.jpeg" },
-  { id: 3, url: "/imgs/wonharaGallery/0004.jpeg" },
-  { id: 4, url: "/imgs/wonharaGallery/0005.jpeg" },
-  { id: 5, url: "/imgs/wonharaGallery/0006.jpeg" },
-  { id: 6, url: "/imgs/wonharaGallery/0007.jpeg" },
-  { id: 7, url: "/imgs/wonharaGallery/0008.jpeg" },
-  { id: 8, url: "/imgs/wonharaGallery/0009.jpeg" },
-  { id: 9, url: "/imgs/wonharaGallery/0010.jpeg" },
-  { id: 10, url: "/imgs/wonharaGallery/0011.jpeg" },
+  {
+    id: 0,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/1.jpeg",
+  },
+  {
+    id: 1,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/2.jpeg",
+  },
+  {
+    id: 2,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/3.jpeg",
+  },
+  {
+    id: 3,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/4.jpeg",
+  },
+  {
+    id: 4,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/5.jpeg",
+  },
+  {
+    id: 5,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/6.jpeg",
+  },
+  {
+    id: 6,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/7.jpeg",
+  },
+  {
+    id: 7,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/8.jpeg",
+  },
+  {
+    id: 8,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/9.jpeg",
+  },
+  {
+    id: 9,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/010.jpeg",
+  },
+  {
+    id: 10,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/011.jpeg",
+  },
+  {
+    id: 11,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/012.jpeg",
+  },
+  {
+    id: 12,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/013.jpeg",
+  },
+  {
+    id: 13,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/014.jpeg",
+  },
+  {
+    id: 14,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/015.jpeg",
+  },
+  {
+    id: 15,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/016.jpeg",
+  },
+  {
+    id: 16,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/017.jpeg",
+  },
+  {
+    id: 17,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/018.jpeg",
+  },
 ];
