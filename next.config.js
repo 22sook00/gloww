@@ -8,7 +8,7 @@ const nextConfig = {
       "s3.us-west-2.amazonaws.com",
       "glow-wedding-card.s3.us-east-2.amazonaws.com",
     ],
-    format: ["image/png", "image/webp", "image/jpeg"],
+    formats: ["image/avif", "image/webp"],
   },
 };
 
