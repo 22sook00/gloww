@@ -54,7 +54,6 @@ const Gallery = () => {
                   height={450}
                   quality={70}
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                  //sizes="(max-width:50px) 2vw, (max-width:415px)50vw, 75vw" //모바일까지 최적화 하기 위해
                   className="absolute inset-0 w-full h-full rounded-sm cursor-pointer object-cover"
                   placeholder="blur"
                   blurDataURL={img.blurHash || staticBlurUrl()}
