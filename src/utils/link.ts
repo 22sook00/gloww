@@ -7,22 +7,76 @@ export const locationLink = {
 
 export const mainImgLink = [{ id: 0, url: "/imgs/wonharaGallery/000.jpeg" }];
 export const imgLink = [
-  { id: 0, url: "/imgs/wonharaGallery/001.jpeg" },
-  { id: 1, url: "/imgs/wonharaGallery/002.jpeg" },
-  { id: 2, url: "/imgs/wonharaGallery/003.jpeg" },
-  { id: 3, url: "/imgs/wonharaGallery/004.jpeg" },
-  { id: 4, url: "/imgs/wonharaGallery/005.jpeg" },
-  { id: 5, url: "/imgs/wonharaGallery/006.jpeg" },
-  { id: 6, url: "/imgs/wonharaGallery/007.jpeg" },
-  { id: 7, url: "/imgs/wonharaGallery/008.jpeg" },
-  { id: 8, url: "/imgs/wonharaGallery/009.jpeg" },
-  { id: 9, url: "/imgs/wonharaGallery/010.jpeg" },
-  { id: 10, url: "/imgs/wonharaGallery/011.jpeg" },
-  { id: 11, url: "/imgs/wonharaGallery/012.jpeg" },
-  { id: 12, url: "/imgs/wonharaGallery/013.jpeg" },
-  { id: 13, url: "/imgs/wonharaGallery/014.jpeg" },
-  { id: 14, url: "/imgs/wonharaGallery/015.jpeg" },
-  { id: 15, url: "/imgs/wonharaGallery/016.jpeg" },
-  { id: 16, url: "/imgs/wonharaGallery/017.jpeg" },
-  { id: 17, url: "/imgs/wonharaGallery/018.jpeg" },
+  {
+    id: 0,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/1.jpeg",
+  },
+  {
+    id: 1,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/2.jpeg",
+  },
+  {
+    id: 2,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/3.jpeg",
+  },
+  {
+    id: 3,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/4.jpeg",
+  },
+  {
+    id: 4,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/5.jpeg",
+  },
+  {
+    id: 5,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/6.jpeg",
+  },
+  {
+    id: 6,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/7.jpeg",
+  },
+  {
+    id: 7,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/8.jpeg",
+  },
+  {
+    id: 8,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/9.jpeg",
+  },
+  {
+    id: 9,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/010.jpeg",
+  },
+  {
+    id: 10,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/011.jpeg",
+  },
+  {
+    id: 11,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/012.jpeg",
+  },
+  {
+    id: 12,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/013.jpeg",
+  },
+  {
+    id: 13,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/014.jpeg",
+  },
+  {
+    id: 14,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/015.jpeg",
+  },
+  {
+    id: 15,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/016.jpeg",
+  },
+  {
+    id: 16,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/017.jpeg",
+  },
+  {
+    id: 17,
+    url: "https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/018.jpeg",
+  },
 ];
