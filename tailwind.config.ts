@@ -90,7 +90,6 @@ const config: Config = {
         rubikBold: ["Rubik Bold"],
         NotoSansKR: ["Noto Sans KR", "sans-serif"],
         bookk: ["var(--font-bookk)"],
-        gowun: ["var(--font-gowun)"],
         nanum: ["var(--font-nanum)"],
         amiri: ["var(--font-amiri)"],
         myungjo: ["var(--font-myungjo)"],

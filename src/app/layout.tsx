@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Gowun_Batang, Nanum_Myeongjo, Amiri } from "next/font/google";
+import { Nanum_Myeongjo, Amiri } from "next/font/google";
 import localFont from "next/font/local";
 
 import { siteMetadata } from "@/utils/siteMetaData";
@@ -30,13 +30,7 @@ const amiri = Amiri({
   weight: "400",
   adjustFontFallback: false,
 });
-const gowun_batang = Gowun_Batang({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-gowun",
-  weight: "400",
-  adjustFontFallback: false,
-});
+
 const nanum_myungjo = Nanum_Myeongjo({
   subsets: ["latin"],
   display: "swap",
@@ -108,7 +102,6 @@ export default function RootLayout({
       ${nanum_square.variable}
       ${bookk.variable}
       ${amiri.variable}
-      ${gowun_batang.variable}
       ${nanum_myungjo.variable}
       `}
       >

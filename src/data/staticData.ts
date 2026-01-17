@@ -9,9 +9,8 @@ export const TEMPLATE_ARR = [
 
 export const FONT_ARR = [
   { fontId: 0, code: "pretendard", name: "기본서체" },
-  { fontId: 1, code: "gowun", name: "고운바탕" },
-  { fontId: 2, code: "bookk", name: "부크명조" },
-  { fontId: 3, code: "nanum", name: "나눔스퀘어" },
+  { fontId: 1, code: "bookk", name: "부크명조" },
+  { fontId: 2, code: "nanum", name: "나눔스퀘어" },
 ];
 
 export const EFFECT_ARR = [

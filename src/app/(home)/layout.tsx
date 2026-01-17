@@ -1,6 +1,6 @@
 import Header from "@/components/header/Header";
 import type { Metadata } from "next";
-import { Gowun_Batang } from "next/font/google";
+
 import localFont from "next/font/local";
 
 import { siteMetadata } from "@/utils/siteMetaData";
@@ -21,13 +21,6 @@ const pretendard = localFont({
   variable: "--font-pretendard",
   display: "swap",
 });
-const gowun_batang = Gowun_Batang({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-gowun",
-  weight: "400",
-});
-
 export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
@@ -75,7 +68,6 @@ export default function RootLayout({
         ${pretendard.variable}
         ${nanum_square.variable}
         ${bookk.variable}
-        ${gowun_batang.variable}
         `}
       >
         <Header />

@@ -20,7 +20,7 @@ export interface Design {
   mainImage: string;
   template: string;
   color: string;
-  font: "pretendard" | "gowun" | "bookk" | "nanum";
+  font: "pretendard" | "bookk" | "nanum";
   effect: "none" | "snow" | "confetti" | "sakura" | "wave";
 }
 export interface Date {

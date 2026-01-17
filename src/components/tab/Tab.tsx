@@ -19,8 +19,6 @@ const Tab = ({ value, text, font = "pretendard", code }: TabProps) => {
     switch (font) {
       case "bookk":
         return "font-bookk";
-      case "gowun":
-        return "font-gowun";
       case "nanum":
         return "font-nanum";
       default:
