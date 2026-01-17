@@ -82,6 +82,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>{siteMetadata.title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={siteMetadata.siteUrl} />
+
         <meta name="description" content={siteMetadata.description} />
         <meta property="og:title" content={siteMetadata.title} />
         <meta property="og:description" content={siteMetadata.description} />
@@ -92,9 +96,18 @@ export default function RootLayout({
           //content="https://wedding-thumbnail.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-07-31-22-50-45.jpeg"
           content="https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/img_thumbnail.jpeg"
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={siteMetadata.title} />
+        <meta name="twitter:description" content={siteMetadata.description} />
+        <meta
+          name="twitter:image"
+          content="https://glow-wedding-card.s3.us-east-2.amazonaws.com/cdn/img_thumbnail.jpeg"
+        />
+
         <meta property="og:image:alt" content="thumbnail" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:type" content="website" />
+        <meta name="author" content="Gloww Wedding" />
       </head>
       <body
         className={`

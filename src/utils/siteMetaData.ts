@@ -1,9 +1,9 @@
 // please update required information
 export const siteMetadata = {
-  title: `💌 강윤구 & 최지수 결혼합니다. \n⏱️ 3월 22일 일요일 12시 40분`,
+  title: `강윤구 ❣️ 최지수 결혼식에 초대합니다.`,
   author: "22SOOK00",
   headerTitle: "gloww_wedding card",
-  description: `💌 강윤구 & 최지수 결혼합니다.`,
+  description: `⏱️ 3월 22일 일요일 12시 40분`,
   language: "ko_kr",
   theme: "system",
   siteUrl: "https://gloww.vercel.app/",
