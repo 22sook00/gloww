@@ -16,16 +16,16 @@ const Date = () => {
       <div className="flex-col-default items-center">
         <p className="sub-title">THE WEDDING DAY</p>
         <div className="flex flex-col justify-center items-center mb-4">
-          <p className="leading-7">{datePart}</p>
-          <p className="leading-7">{timePart}</p>
+          <p className="leading-8">{datePart}</p>
+          <p className="text-sm leading-7">{timePart}</p>
         </div>
         <DatePicker
           firstDayOfWeek={0}
           size="md"
           locale="ko"
-          defaultDate={new window.Date(2025, 5, 14)}
-          defaultValue={new window.Date(2025, 5, 14)}
-          value={new window.Date(2025, 5, 14)}
+          defaultDate={new window.Date(2026, 2, 22)}
+          defaultValue={new window.Date(2026, 2, 22)}
+          value={new window.Date(2026, 2, 22)}
         />
       </div>
     </section>

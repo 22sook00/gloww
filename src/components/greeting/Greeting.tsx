@@ -11,10 +11,10 @@ const Greeting = () => {
   return (
     <section className="bg-light-beige p-5 shadow-sm">
       <article className="bg-white py-10 px-6">
-        <h3 className="text-[20px] mb-6 text-[#89757a]">결혼합니다</h3>
+        <h3 className="text-[20px] mb-6 text-[#89757a]">저희, 결혼합니다.</h3>
 
         <p className="text-sm font-medium leading-[32px] text-dark-gray">
-          하나님 안에서 키워온 10년의
+          {/*하나님 안에서 키워온 10년의
           <span className="text-[#a96b6c]"> 사랑</span>, <br />
           이제는 <span className="font-semibold">하나님께서 주신 마음</span>으로
           결단하여 <br />
@@ -25,6 +25,14 @@ const Greeting = () => {
           <br />
           <br />
           저희의 결혼예배 자리에 함께하시어 <br />
+          축복으로 자리를 빛내주시길 바랍니다.*/}
+          좋아하는 마음이 쌓여
+          <br />
+          사랑이 되었고,
+          <br />
+          이제 평생이 되려 합니다.
+          <br />
+          저희의 결혼에 함께하시어 <br />
           축복으로 자리를 빛내주시길 바랍니다.
         </p>
 
@@ -35,7 +43,7 @@ const Greeting = () => {
               {groom.parents[0]?.isDead && "故"}
               {groom.parents[0]?.name} · {groom.parents[1]?.name}
             </span>
-            <span className="text-default-gray text-xs">의 장남</span>
+            <span className="text-default-gray text-xs">의 아들</span>
             <h5 className="font-medium">{groom.name.slice(1)}</h5>
           </div>
           <div className="flex gap-2">
@@ -53,7 +61,7 @@ const Greeting = () => {
               {bride.parents[0]?.isDead && "故"}
               {bride.parents[0]?.name} · {bride.parents[1]?.name}
             </h5>
-            <span className="text-default-gray text-xs"> 의 장녀 </span>
+            <span className="text-default-gray text-xs"> 의 딸 </span>
             <h5 className=" font-medium">{bride.name.slice(1)}</h5>
           </div>
           <div className="flex gap-2">

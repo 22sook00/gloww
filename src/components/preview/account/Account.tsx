@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { weddingDataState } from "@/utils/atom";
 import Dropdown from "@/components/dropdown/Dropdown";
-
 import Dialog from "@/components/dialog/Dialog";
 import AccountContent from "./AccountContent";
 
@@ -15,8 +14,9 @@ const Account = () => {
       setIsOpenCopyAlert(false);
     }, 1500);
   };
+
   return (
-    <section className="bg-light-beige py-[50px]  px-[15px] flex-col-default gap-3 items-center shadow-sm">
+    <section className="bg-light-beige py-[50px] px-[15px] flex-col-default gap-3 items-center shadow-sm">
       <div className="flex flex-col justify-center items-center mb-4">
         <p className="leading-7 font-medium text-default-text">
           마음 전하실 곳

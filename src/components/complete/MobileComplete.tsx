@@ -1,8 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
-import { weddingDataState } from "@/utils/atom";
-import { useRecoilState } from "recoil";
 
 import Footer from "@/components/footer/Footer";
 
@@ -25,26 +23,8 @@ const Date = dynamic(() => import("@/components/preview/date/Date"), {
 });
 
 const MobileComplete = () => {
-  const [wedding, setWedding] = useRecoilState(weddingDataState);
-
-  //useEffect(() => {
-  //  fetch("http://localhost:8888/wedding")
-  //    .then((res) => {
-  //      if (res.ok === false) {
-  //        throw new Error("청첩장 정보를 불러오지 못했습니다.");
-  //      }
-  //      return res.json();
-  //    })
-  //    .then((data) => {
-  //      setWedding(data);
-  //    })
-  //    .catch((err) => {
-  //      console.dir(err, "에러발생");
-  //    });
-  //}, []);
-
   return (
-    <div className={`text-default-black flex-center relative font-myungjo`}>
+    <div className={`text-default-black flex-center relative font-bookk`}>
       <div
         className={`w-full max-w-[450px] flex flex-col
         overflow-scroll lg:rounded-[24px] shadow-md `}
@@ -60,7 +40,6 @@ const MobileComplete = () => {
         <Location />
         {/*<Board />*/}
         <Account />
-        {/*outro*/}
         <Outro />
         <Share />
 
